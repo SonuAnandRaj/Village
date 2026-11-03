@@ -1,0 +1,5104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- PWA Setup -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#312e81" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <head>
+    <script data-bard-client-injected="true">
+      (function (firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+      })(
+        '\n{\n  "apiKey": "AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY",\n  "authDomain": "bard-frontend.firebaseapp.com",\n  "projectId": "bard-frontend",\n  "storageBucket": "bard-frontend.firebasestorage.app",\n  "messagingSenderId": "175205271074",\n  "appId": "1:175205271074:web:2b7bd4d34d33bf38e6ec7b"\n}\n',
+        "eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwNzk1MzU3NTQxNzk3NjY2NjA3MSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiIwNjNiNjlkYTAyZDQtaW5kZXguaHRtbC02MiJ9LCJleHAiOjE3OTM2NDA3MDAsImlhdCI6MTc5MzYzNzEwMCwiYWxnIjoiUlMyNTYifQ.LWpg6BaMW4rnPhuzvKgTNW9mw4Dl3VTxMWUIFwcvFZc2yu0ztDk8_vKa8nL34PtzGDec4Rkimnzm8DQCo6bvuQgEdIRAFHSQ1eJAtwS8eQFrwW3xvem87_tmJpqRc_cES_AuxDy0hv5g8LOCDmsvqRqpSuyjzkeZSMoYE_GTkxhlQ_Ks_V9vKrpJYvEdItHvrYlMXwWdbykxi967oYAoYXNFztoD0nkZkS567ShT6nIn3leQLN7ksCPof_pvejlcxgTMLRNrhtqppdzWEOhIxATa44edMHZGYHOaG4gX8aQN1NryifTfTFECYTADCVMp-P5H1XwIz8xf2Wt5Cd3oPg",
+        "063b69da02d4-index.html-62"
+      );
+    </script>
+    <script data-bard-client-injected="true">
+      document.addEventListener("input", (event) => {
+        if (
+          event.target &&
+          (event.target.isContentEditable ||
+            event.target.hasAttribute("contenteditable"))
+        ) {
+          const clonedDoc = document.cloneNode(true);
+          const injectedScripts = clonedDoc.querySelectorAll(
+            '[data-bard-client-injected="true"]'
+          );
+          injectedScripts.forEach((el) => el.remove());
+          window.parent.postMessage(
+            {
+              type: "inlineEdit",
+              html: "<!DOCTYPE html>\n" + clonedDoc.documentElement.outerHTML,
+            },
+            "*"
+          );
+        }
+      });
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        "use strict";
+        window.addEventListener("message", (a) => {
+          a.data &&
+            a.data.type === "SUPPLEMENTAL_DATA_UPDATE" &&
+            window.dispatchEvent(
+              new CustomEvent("supplementaldataupdate", { detail: a.data.data })
+            );
+        });
+      }).call(this);
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        "use strict";
+        var k =
+          typeof Object.defineProperties == "function"
+            ? Object.defineProperty
+            : function (a, b, d) {
+                if (a == Array.prototype || a == Object.prototype) return a;
+                a[b] = d.value;
+                return a;
+              };
+        function m(a) {
+          a = [
+            "object" == typeof globalThis && globalThis,
+            a,
+            "object" == typeof window && window,
+            "object" == typeof self && self,
+            "object" == typeof global && global,
+          ];
+          for (var b = 0; b < a.length; ++b) {
+            var d = a[b];
+            if (d && d.Math == Math) return d;
+          }
+          throw Error("Cannot find global object");
+        }
+        var q = m(this);
+        function r(a, b) {
+          if (b)
+            a: {
+              var d = q;
+              a = a.split(".");
+              for (var c = 0; c < a.length - 1; c++) {
+                var e = a[c];
+                if (!(e in d)) break a;
+                d = d[e];
+              }
+              a = a[a.length - 1];
+              c = d[a];
+              b = b(c);
+              b != c &&
+                b != null &&
+                k(d, a, { configurable: !0, writable: !0, value: b });
+            }
+        }
+        function t(a) {
+          function b(c) {
+            return a.next(c);
+          }
+          function d(c) {
+            return a.throw(c);
+          }
+          return new Promise(function (c, e) {
+            function f(g) {
+              g.done
+                ? c(g.value)
+                : Promise.resolve(g.value).then(b, d).then(f, e);
+            }
+            f(a.next());
+          });
+        }
+        function u(a) {
+          return t(a());
+        }
+        r("Object.values", function (a) {
+          return a
+            ? a
+            : function (b) {
+                var d = [],
+                  c;
+                for (c in b)
+                  Object.prototype.hasOwnProperty.call(b, c) && d.push(b[c]);
+                return d;
+              };
+        });
+        r("Array.prototype.includes", function (a) {
+          return a
+            ? a
+            : function (b, d) {
+                var c = this;
+                c instanceof String && (c = String(c));
+                var e = c.length;
+                d = d || 0;
+                for (d < 0 && (d = Math.max(d + e, 0)); d < e; d++) {
+                  var f = c[d];
+                  if (f === b || Object.is(f, b)) return !0;
+                }
+                return !1;
+              };
+        }); /*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+        function v(a, b) {
+          var d = a.style;
+          b.backgroundColor && (d.backgroundColor = b.backgroundColor);
+          b.width && (d.width = `${b.width}px`);
+          b.height && (d.height = `${b.height}px`);
+          var c = b.style;
+          c != null &&
+            Object.keys(c).forEach((e) => {
+              d[e] = c[e];
+            });
+        }
+        var aa = (() => {
+          var a = 0;
+          return () => {
+            a += 1;
+            return `u${`0000${((Math.random() * 1679616) << 0).toString(
+              36
+            )}`.slice(-4)}${a}`;
+          };
+        })();
+        function w(a) {
+          var b = [];
+          for (let d = 0, c = a.length; d < c; d++) b.push(a[d]);
+          return b;
+        }
+        let y = null;
+        function z(a = {}) {
+          return y
+            ? y
+            : a.u
+            ? (y = a.u)
+            : (y = w(window.getComputedStyle(document.documentElement)));
+        }
+        function A(a, b) {
+          return (a = (a.ownerDocument.defaultView || window)
+            .getComputedStyle(a)
+            .getPropertyValue(b))
+            ? parseFloat(a.replace("px", ""))
+            : 0;
+        }
+        function B(a, b = {}) {
+          var d;
+          if (!(d = b.width)) {
+            d = A(a, "border-left-width");
+            var c = A(a, "border-right-width");
+            d = a.clientWidth + d + c;
+          }
+          (b = b.height) ||
+            ((b = A(a, "border-top-width")),
+            (c = A(a, "border-bottom-width")),
+            (b = a.clientHeight + b + c));
+          return { width: d, height: b };
+        }
+        function C(a) {
+          return new Promise((b, d) => {
+            var c = new Image();
+            c.onload = () => {
+              c.decode().then(() => {
+                requestAnimationFrame(() => b(c));
+              });
+            };
+            c.onerror = d;
+            c.crossOrigin = "anonymous";
+            c.decoding = "async";
+            c.src = a;
+          });
+        }
+        function ba(a) {
+          return u(function* () {
+            return Promise.resolve()
+              .then(() => new XMLSerializer().serializeToString(a))
+              .then(encodeURIComponent)
+              .then((b) => `data:image/svg+xml;charset=utf-8,${b}`);
+          });
+        }
+        function ca(a, b, d) {
+          return u(function* () {
+            var c = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "svg"
+              ),
+              e = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "foreignObject"
+              );
+            c.setAttribute("width", `${b}`);
+            c.setAttribute("height", `${d}`);
+            c.setAttribute("viewBox", `0 0 ${b} ${d}`);
+            e.setAttribute("width", "100%");
+            e.setAttribute("height", "100%");
+            e.setAttribute("x", "0");
+            e.setAttribute("y", "0");
+            e.setAttribute("externalResourcesRequired", "true");
+            c.appendChild(e);
+            e.appendChild(a);
+            return ba(c);
+          });
+        }
+        var D = (a, b) => {
+          if (a instanceof b) return !0;
+          a = Object.getPrototypeOf(a);
+          return a === null ? !1 : a.constructor.name === b.name || D(a, b);
+        };
+        function da(a, b) {
+          return z(b)
+            .map((d) => {
+              var c = a.getPropertyValue(d),
+                e = a.getPropertyPriority(d);
+              return `${d}: ${c}${e ? " !important" : ""};`;
+            })
+            .join(" ");
+        }
+        function E(a, b, d, c) {
+          a = window.getComputedStyle(a, d);
+          var e = a.getPropertyValue("content");
+          if (e !== "" && e !== "none") {
+            var f = aa();
+            try {
+              b.className = `${b.className} ${f}`;
+            } catch (h) {
+              return;
+            }
+            e = document.createElement("style");
+            var g = e.appendChild;
+            d = `.${f}:${d}`;
+            a.cssText
+              ? ((c = a.getPropertyValue("content")),
+                (c = `${a.cssText} content: '${c.replace(/'|"/g, "")}';`))
+              : (c = da(a, c));
+            g.call(e, document.createTextNode(`${d}{${c}}`));
+            b.appendChild(e);
+          }
+        }
+        function F(a) {
+          return a.search(/^(data:)/) !== -1;
+        }
+        function G(a, b, d) {
+          return u(function* () {
+            var c = yield fetch(a, b);
+            if (c.status === 404) throw Error(`Resource "${c.url}" not found`);
+            var e = yield c.blob();
+            return new Promise((f, g) => {
+              var h = new FileReader();
+              h.onerror = g;
+              h.onloadend = () => {
+                try {
+                  f(d({ v: c, result: h.result }));
+                } catch (l) {
+                  g(l);
+                }
+              };
+              h.readAsDataURL(e);
+            });
+          });
+        }
+        const H = {};
+        function ea(a, b, d) {
+          var c = a.replace(/\?.*/, "");
+          d && (c = a);
+          /ttf|otf|eot|woff2?/i.test(c) && (c = c.replace(/.*\//, ""));
+          return b ? `[${b}]${c}` : c;
+        }
+        function I(a, b, d) {
+          return u(function* () {
+            var c = ea(a, b, d.F);
+            if (H[c] != null) return H[c];
+            d.B && (a += (/\?/.test(a) ? "&" : "?") + new Date().getTime());
+            try {
+              let f = yield G(a, d.l, ({ v: g, result: h }) => {
+                b || (b = g.headers.get("Content-Type") || "");
+                return h.split(/,/)[1];
+              });
+              var e = `data:${b};base64,${f}`;
+            } catch (f) {
+              e = d.o || "";
+            }
+            return (H[c] = e);
+          });
+        }
+        const J = {
+          R: "application/font-woff",
+          S: "application/font-woff",
+          O: "application/font-truetype",
+          C: "application/vnd.ms-fontobject",
+          J: "image/png",
+          H: "image/jpeg",
+          G: "image/jpeg",
+          D: "image/gif",
+          N: "image/tiff",
+          M: "image/svg+xml",
+          P: "image/webp",
+        };
+        function K(a) {
+          return (a = /\.([^./]*?)$/g.exec(a)) ? a[1] : "";
+        }
+        function fa(a) {
+          return u(function* () {
+            var b = a.toDataURL();
+            return b === "data:," ? a.cloneNode(!1) : C(b);
+          });
+        }
+        function ha(a, b) {
+          return u(function* () {
+            if (a.currentSrc) {
+              var d = document.createElement("canvas");
+              let c = d.getContext("2d");
+              d.width = a.clientWidth;
+              d.height = a.clientHeight;
+              c == null || c.drawImage(a, 0, 0, d.width, d.height);
+              d = d.toDataURL();
+              return C(d);
+            }
+            d = a.poster;
+            d = yield I(d, J[K(d).toLowerCase()] || "", b);
+            return C(d);
+          });
+        }
+        function ia(a, b) {
+          return u(function* () {
+            try {
+              let d;
+              if (a == null ? 0 : (d = a.contentDocument) == null ? 0 : d.body)
+                return yield L(a.contentDocument.body, b, !0);
+            } catch (d) {}
+            return a.cloneNode(!1);
+          });
+        }
+        function ja(a, b) {
+          return u(function* () {
+            return D(a, HTMLCanvasElement)
+              ? fa(a)
+              : D(a, HTMLVideoElement)
+              ? ha(a, b)
+              : D(a, HTMLIFrameElement)
+              ? ia(a, b)
+              : a.cloneNode(
+                  a.tagName != null && a.tagName.toUpperCase() === "SVG"
+                );
+          });
+        }
+        function ka(a, b, d) {
+          return u(function* () {
+            if (b.tagName != null && b.tagName.toUpperCase() === "SVG")
+              return b;
+            var c = [];
+            if (
+              a.tagName != null &&
+              a.tagName.toUpperCase() === "SLOT" &&
+              a.assignedNodes
+            )
+              c = w(a.assignedNodes());
+            else {
+              let e;
+              if (
+                D(a, HTMLIFrameElement) &&
+                ((e = a.contentDocument) == null ? 0 : e.body)
+              )
+                c = w(a.contentDocument.body.childNodes);
+              else {
+                let f;
+                c = w(((f = a.shadowRoot) != null ? f : a).childNodes);
+              }
+            }
+            if (c.length === 0 || D(a, HTMLVideoElement)) return b;
+            yield c.reduce(
+              (e, f) =>
+                e
+                  .then(() => L(f, d))
+                  .then((g) => {
+                    g && b.appendChild(g);
+                  }),
+              Promise.resolve()
+            );
+            return b;
+          });
+        }
+        function la(a, b, d) {
+          var c = b.style;
+          if (c) {
+            var e = window.getComputedStyle(a);
+            e.cssText
+              ? ((c.cssText = e.cssText),
+                (c.transformOrigin = e.transformOrigin))
+              : z(d).forEach((f) => {
+                  var g = e.getPropertyValue(f);
+                  f === "font-size" &&
+                    g.endsWith("px") &&
+                    (g = `${
+                      Math.floor(parseFloat(g.substring(0, g.length - 2))) - 0.1
+                    }px`);
+                  D(a, HTMLIFrameElement) &&
+                    f === "display" &&
+                    g === "inline" &&
+                    (g = "block");
+                  f === "d" &&
+                    b.getAttribute("d") &&
+                    (g = `path(${b.getAttribute("d")})`);
+                  c.setProperty(f, g, e.getPropertyPriority(f));
+                });
+          }
+        }
+        function ma(a, b) {
+          D(a, HTMLSelectElement) &&
+            (b = Array.from(b.children).find(
+              (d) => a.value === d.getAttribute("value")
+            )) &&
+            b.setAttribute("selected", "");
+        }
+        function na(a, b) {
+          return u(function* () {
+            var d = a.querySelectorAll ? a.querySelectorAll("use") : [];
+            if (d.length === 0) return a;
+            var c = {};
+            for (var e = 0; e < d.length; e++) {
+              var f = d[e].getAttribute("xlink:href");
+              if (f) {
+                let g = document.querySelector(f);
+                a.querySelector(f) || !g || c[f] || (c[f] = yield L(g, b, !0));
+              }
+            }
+            d = Object.values(c);
+            if (d.length) {
+              c = document.createElementNS(
+                "http://www.w3.org/1999/xhtml",
+                "svg"
+              );
+              c.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+              c.style.position = "absolute";
+              c.style.width = "0";
+              c.style.height = "0";
+              c.style.overflow = "hidden";
+              c.style.display = "none";
+              e = document.createElementNS(
+                "http://www.w3.org/1999/xhtml",
+                "defs"
+              );
+              c.appendChild(e);
+              for (f = 0; f < d.length; f++) e.appendChild(d[f]);
+              a.appendChild(c);
+            }
+            return a;
+          });
+        }
+        function L(a, b, d) {
+          return u(function* () {
+            return d || !b.filter || b.filter(a)
+              ? Promise.resolve(a)
+                  .then((c) => ja(c, b))
+                  .then((c) => ka(a, c, b))
+                  .then((c) => {
+                    D(c, Element) &&
+                      (la(a, c, b),
+                      E(a, c, ":before", b),
+                      E(a, c, ":after", b),
+                      D(a, HTMLTextAreaElement) && (c.textContent = a.value),
+                      D(a, HTMLInputElement) &&
+                        c.setAttribute("value", a.value),
+                      ma(a, c));
+                    return c;
+                  })
+                  .then((c) => na(c, b))
+              : null;
+          });
+        }
+        const M = /url\((['"]?)([^'"]+?)\1\)/g,
+          oa = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
+          pa = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
+        function qa(a) {
+          var b = [];
+          a.replace(M, (d, c, e) => {
+            b.push(e);
+            return d;
+          });
+          return b.filter((d) => !F(d));
+        }
+        function ra(a, b, d, c) {
+          return u(function* () {
+            try {
+              let e = d ? new URL(b, d || void 0).toString() : b,
+                f;
+              f = yield I(e, J[K(b).toLowerCase()] || "", c);
+              return a.replace(
+                new RegExp(
+                  `(url\\(['"]?)(${b.replace(
+                    /([.*+?^${}()|\[\]\/\\])/g,
+                    "\\$1"
+                  )})(['"]?\\))`,
+                  "g"
+                ),
+                `$1${f}$3`
+              );
+            } catch (e) {}
+            return a;
+          });
+        }
+        function sa(a, { K: b }) {
+          return b
+            ? a.replace(pa, (d) => {
+                for (;;) {
+                  let [c, , e] = oa.exec(d) || [];
+                  if (!e) return "";
+                  if (e === b) return `src: ${c};`;
+                }
+              })
+            : a;
+        }
+        function N(a, b, d) {
+          return u(function* () {
+            if (a.search(M) === -1) return a;
+            var c = sa(a, d);
+            return qa(c).reduce(
+              (e, f) => e.then((g) => ra(g, f, b, d)),
+              Promise.resolve(c)
+            );
+          });
+        }
+        function O(a, b, d) {
+          return u(function* () {
+            var c,
+              e = (c = b.style) == null ? void 0 : c.getPropertyValue(a);
+            return e
+              ? ((c = yield N(e, null, d)),
+                b.style.setProperty(a, c, b.style.getPropertyPriority(a)),
+                !0)
+              : !1;
+          });
+        }
+        function ta(a, b) {
+          return u(function* () {
+            (yield O("background", a, b)) ||
+              (yield O("background-image", a, b));
+            (yield O("mask", a, b)) ||
+              (yield O("-webkit-mask", a, b)) ||
+              (yield O("mask-image", a, b)) ||
+              (yield O("-webkit-mask-image", a, b));
+          });
+        }
+        function ua(a, b) {
+          return u(function* () {
+            var d = D(a, HTMLImageElement);
+            if (
+              (d && !F(a.src)) ||
+              (D(a, SVGImageElement) && !F(a.href.baseVal))
+            ) {
+              var c = d ? a.src : a.href.baseVal,
+                e = yield I(c, J[K(c).toLowerCase()] || "", b);
+              yield new Promise((f, g) => {
+                a.onload = f;
+                a.onerror = b.h
+                  ? (...h) => {
+                      try {
+                        f(b.h(...h));
+                      } catch (l) {
+                        g(l);
+                      }
+                    }
+                  : g;
+                a.decode && (a.decode = f);
+                a.loading === "lazy" && (a.loading = "eager");
+                d ? ((a.srcset = ""), (a.src = e)) : (a.href.baseVal = e);
+              });
+            }
+          });
+        }
+        function va(a, b) {
+          return u(function* () {
+            var d = w(a.childNodes).map((c) => P(c, b));
+            yield Promise.all(d).then(() => a);
+          });
+        }
+        function P(a, b) {
+          return u(function* () {
+            D(a, Element) && (yield ta(a, b), yield ua(a, b), yield va(a, b));
+          });
+        }
+        const Q = {};
+        function R(a) {
+          return u(function* () {
+            var b = Q[a];
+            if (b != null) return b;
+            b = yield (yield fetch(a)).text();
+            b = { url: a, cssText: b };
+            return (Q[a] = b);
+          });
+        }
+        function S(a, b) {
+          return u(function* () {
+            var d = a.cssText,
+              c = /url\(["']?([^"')]+)["']?\)/g,
+              e = (d.match(/url\([^)]+\)/g) || []).map((f) =>
+                u(function* () {
+                  var g = f.replace(c, "$1");
+                  g.startsWith("https://") || (g = new URL(g, a.url).href);
+                  return G(g, b.l, ({ result: h }) => {
+                    d = d.replace(f, `url(${h})`);
+                    return [f, h];
+                  });
+                })
+              );
+            return Promise.all(e).then(() => d);
+          });
+        }
+        function T(a) {
+          if (a == null) return [];
+          var b = [];
+          a = a.replace(/(\/\*[\s\S]*?\*\/)/gi, "");
+          for (
+            var d = RegExp(
+              "((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})",
+              "gi"
+            );
+            ;
+
+          ) {
+            var c = d.exec(a);
+            if (c === null) break;
+            b.push(c[0]);
+          }
+          a = a.replace(d, "");
+          d = /@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;
+          for (
+            c = RegExp(
+              "((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})",
+              "gi"
+            );
+            ;
+
+          ) {
+            let e = d.exec(a);
+            if (e === null)
+              if (((e = c.exec(a)), e === null)) break;
+              else d.lastIndex = c.lastIndex;
+            else c.lastIndex = d.lastIndex;
+            b.push(e[0]);
+          }
+          return b;
+        }
+        function wa(a, b) {
+          return u(function* () {
+            var d = [],
+              c = [];
+            a.forEach((e) => {
+              if ("cssRules" in e)
+                try {
+                  w(e.cssRules || []).forEach((f, g) => {
+                    if (f.type === CSSRule.IMPORT_RULE) {
+                      let h = g + 1;
+                      f = R(f.href)
+                        .then((l) => S(l, b))
+                        .then((l) =>
+                          T(l).forEach((p) => {
+                            try {
+                              e.insertRule(
+                                p,
+                                p.startsWith("@import")
+                                  ? (h += 1)
+                                  : e.cssRules.length
+                              );
+                            } catch (x) {}
+                          })
+                        )
+                        .catch(() => {});
+                      c.push(f);
+                    }
+                  });
+                } catch (f) {
+                  let g =
+                    a.find((h) => h.href == null) || document.styleSheets[0];
+                  e.href != null &&
+                    c.push(
+                      R(e.href)
+                        .then((h) => S(h, b))
+                        .then((h) =>
+                          T(h).forEach((l) => {
+                            g.insertRule(l, g.cssRules.length);
+                          })
+                        )
+                        .catch(() => {})
+                    );
+                }
+            });
+            return Promise.all(c).then(() => {
+              a.forEach((e) => {
+                if ("cssRules" in e)
+                  try {
+                    w(e.cssRules || []).forEach((f) => {
+                      d.push(f);
+                    });
+                  } catch (f) {}
+              });
+              return d;
+            });
+          });
+        }
+        function xa(a) {
+          return a
+            .filter((b) => b.type === CSSRule.FONT_FACE_RULE)
+            .filter((b) => b.style.getPropertyValue("src").search(M) !== -1);
+        }
+        function ya(a, b) {
+          return u(function* () {
+            if (a.ownerDocument == null)
+              throw Error("Provided element is not within a Document");
+            var d = yield wa(w(a.ownerDocument.styleSheets), b);
+            return xa(d);
+          });
+        }
+        function za(a) {
+          function b(c) {
+            (c.style.fontFamily || getComputedStyle(c).fontFamily)
+              .split(",")
+              .forEach((e) => {
+                d.add(e.trim().replace(/["']/g, ""));
+              });
+            Array.from(c.children).forEach((e) => {
+              e instanceof HTMLElement && b(e);
+            });
+          }
+          var d = new Set();
+          b(a);
+          return d;
+        }
+        function Aa(a, b) {
+          return u(function* () {
+            var d = yield ya(a, b),
+              c = za(a);
+            return (yield Promise.all(
+              d
+                .filter((e) =>
+                  c.has(e.style.fontFamily.trim().replace(/["']/g, ""))
+                )
+                .map((e) =>
+                  N(
+                    e.cssText,
+                    e.parentStyleSheet ? e.parentStyleSheet.href : null,
+                    b
+                  )
+                )
+            )).join("\n");
+          });
+        }
+        function Ba(a, b) {
+          return u(function* () {
+            var d = b.m != null ? b.m : b.A ? null : yield Aa(a, b);
+            if (d) {
+              let c = document.createElement("style");
+              c.appendChild(document.createTextNode(d));
+              a.firstChild ? a.insertBefore(c, a.firstChild) : a.appendChild(c);
+            }
+          });
+        }
+        function Ca(a, b = {}) {
+          return u(function* () {
+            var { width: d, height: c } = B(a, b),
+              e = yield L(a, b, !0);
+            yield Ba(e, b);
+            yield P(e, b);
+            v(e, b);
+            return yield ca(e, d, c);
+          });
+        }
+        function Da(a, b = {}) {
+          return u(function* () {
+            var { width: d, height: c } = B(a, b),
+              e = yield Ca(a, b);
+            e = yield C(e);
+            var f = document.createElement("canvas"),
+              g = f.getContext("2d"),
+              h = b.I || window.devicePixelRatio || 1,
+              l = b.j || d,
+              p = b.i || c;
+            f.width = l * h;
+            f.height = p * h;
+            !b.L &&
+              (f.width > 16384 || f.height > 16384) &&
+              (f.width > 16384 && f.height > 16384
+                ? f.width > f.height
+                  ? ((f.height *= 16384 / f.width), (f.width = 16384))
+                  : ((f.width *= 16384 / f.height), (f.height = 16384))
+                : f.width > 16384
+                ? ((f.height *= 16384 / f.width), (f.width = 16384))
+                : ((f.width *= 16384 / f.height), (f.height = 16384)));
+            f.style.width = `${l}`;
+            f.style.height = `${p}`;
+            b.backgroundColor &&
+              ((g.fillStyle = b.backgroundColor),
+              g.fillRect(0, 0, f.width, f.height));
+            g.drawImage(e, 0, 0, f.width, f.height);
+            return f;
+          });
+        }
+        function Ea(a, b = {}) {
+          return u(function* () {
+            return (yield Da(a, b)).toDataURL();
+          });
+        }
+        const Fa = [
+          "gemini.google.com",
+          "corp.google.com",
+          "proxy.googlers.com",
+        ];
+        function V(a) {
+          a = Number(a.replace(/px$/, ""));
+          return Number.isFinite(a) ? a : 0;
+        }
+        function W() {
+          return (
+            document.body.querySelectorAll('[class*="animate"]').length > 0
+          );
+        }
+        function X(a, b) {
+          var d = document.createElement("canvas");
+          d.width = a;
+          d.height = b;
+          return d.toDataURL("image/png");
+        }
+        const Y = X(1, 1);
+        function Z(a, b) {
+          return u(function* () {
+            var d = Math.max(b ? b.width : a.offsetWidth, 1),
+              c = Math.max(b ? b.height : a.offsetHeight, 1),
+              e = HTMLCanvasElement.prototype.toDataURL;
+            b &&
+              (HTMLCanvasElement.prototype.toDataURL = function (f, g) {
+                var h;
+                if ((h = this.isConnected && a.contains(this))) {
+                  {
+                    let n = this.getBoundingClientRect();
+                    if (n.width === 0 || n.height === 0) h = !1;
+                    else if (window.getComputedStyle(this).position === "fixed")
+                      h =
+                        n.bottom > 0 &&
+                        n.top < b.height &&
+                        n.right > 0 &&
+                        n.left < b.width;
+                    else {
+                      h = a.getBoundingClientRect();
+                      var l = n.top - h.top,
+                        p = n.left - h.left,
+                        x = n.right - h.left;
+                      h =
+                        n.bottom - h.top > b.scrollTop &&
+                        l < b.scrollTop + b.height &&
+                        x > b.scrollLeft &&
+                        p < b.scrollLeft + b.width;
+                    }
+                  }
+                  h = !h;
+                }
+                return h ? "data:," : e.call(this, f, g);
+              });
+            try {
+              let f = window.getComputedStyle(a),
+                g = b ? `${V(f.marginTop) - b.scrollTop}px` : void 0,
+                h = b ? `${V(f.marginLeft) - b.scrollLeft}px` : void 0,
+                l = `${Math.max(a.offsetWidth, d)}px`,
+                p,
+                x = `${Math.max(
+                  a.offsetHeight,
+                  c + ((p = b == null ? void 0 : b.scrollTop) != null ? p : 0)
+                )}px`;
+              return yield Ea(
+                a,
+                Object.assign(
+                  {},
+                  { width: d, height: c, j: d, i: c },
+                  b
+                    ? {
+                        style: {
+                          width: l,
+                          height: x,
+                          marginTop: g,
+                          marginLeft: h,
+                          marginBlockStart: g,
+                          marginInlineStart: h,
+                        },
+                      }
+                    : {},
+                  {
+                    A: !0,
+                    filter: (n) => {
+                      if (n.tagName === "IMG") {
+                        let U = n.getAttribute("src");
+                        if (!U || U.trim() === "" || n.style.display === "none")
+                          return !1;
+                      }
+                      return !0;
+                    },
+                    o: Y,
+                    h: () => Y,
+                  }
+                )
+              );
+            } catch (f) {
+              return X(d, c);
+            } finally {
+              HTMLCanvasElement.prototype.toDataURL = e;
+            }
+          });
+        }
+        function Ga() {
+          return u(function* () {
+            var a = document.body.offsetWidth,
+              b = document.body.offsetHeight,
+              d = document.body.cloneNode(!0);
+            d.querySelectorAll('[class*="animate"]').forEach((c) => {
+              c.classList.remove(
+                ...Array.from(c.classList).filter((e) =>
+                  e.startsWith("animate")
+                )
+              );
+            });
+            d.style.width = `${a}px`;
+            d.style.height = `${b}px`;
+            return d;
+          });
+        }
+        function Ha(a) {
+          return u(function* () {
+            var b = {
+                width:
+                  window.innerWidth ||
+                  document.documentElement.clientWidth ||
+                  document.body.offsetWidth,
+                height:
+                  window.innerHeight ||
+                  document.documentElement.clientHeight ||
+                  document.body.offsetHeight,
+                scrollTop:
+                  window.scrollY ||
+                  document.documentElement.scrollTop ||
+                  document.body.scrollTop ||
+                  0,
+                scrollLeft:
+                  window.scrollX ||
+                  document.documentElement.scrollLeft ||
+                  document.body.scrollLeft ||
+                  0,
+              },
+              d = document.body;
+            if (W()) {
+              let c = yield Ga();
+              d = c;
+              document.body.appendChild(c);
+            }
+            b = yield Z(d, b);
+            W() && document.body.removeChild(d);
+            window.parent.postMessage(
+              { type: "SEND_SCREENSHOT", image: b, topOffset: 0 },
+              a.origin
+            );
+          });
+        }
+        function Ia(a) {
+          return u(function* () {
+            var b = {
+              type: "SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",
+              image: yield Z(document.body),
+              topOffset: 0,
+            };
+            window.parent.postMessage(b, a.origin);
+          });
+        }
+        window.addEventListener("message", (a) =>
+          u(function* () {
+            if (Fa.some((d) => a.origin.includes(d))) {
+              var b = a.data;
+              b &&
+                (b.type === "MAKE_SCREENSHOT" && (yield Ha(a)),
+                b.type === "MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION" &&
+                  (yield Ia(a)));
+            }
+          })
+        );
+      })();
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        // Ensure this script is executed only once
+        if (window.firebaseAuthBridgeScriptLoaded) {
+          return;
+        }
+        window.firebaseAuthBridgeScriptLoaded = true;
+
+        let nextTokenPromiseId = 0;
+
+        // Stores { resolve, reject } for ongoing token requests
+        const pendingTokenPromises = {};
+
+        // Listen for messages from the Host Application
+        window.addEventListener("message", function (event) {
+          const messageData = event.data;
+
+          if (
+            messageData &&
+            messageData.type === "RESOLVE_NEW_FIREBASE_TOKEN"
+          ) {
+            const { success, token, error, promiseId } = messageData ?? {};
+            if (pendingTokenPromises[promiseId]) {
+              if (success) {
+                pendingTokenPromises[promiseId].resolve(token);
+              } else {
+                pendingTokenPromises[promiseId].reject(
+                  new Error(error || "Token refresh failed from host.")
+                );
+              }
+              delete pendingTokenPromises[promiseId];
+            }
+          }
+        });
+
+        // Expose a function for the Generated App to request a new Firebase token
+        window.requestNewFirebaseToken = function () {
+          const currentPromiseId = nextTokenPromiseId++;
+          const promise = new Promise((resolve, reject) => {
+            pendingTokenPromises[currentPromiseId] = { resolve, reject };
+          });
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage(
+              {
+                type: "REQUEST_NEW_FIREBASE_TOKEN",
+                promiseId: currentPromiseId,
+              },
+              "*"
+            );
+          } else {
+            pendingTokenPromises[currentPromiseId].reject(
+              new Error("No parent window to request token from.")
+            );
+            delete pendingTokenPromises[currentPromiseId];
+          }
+          return promise;
+        };
+      })();
+    </script>
+    <script data-bard-client-injected="true">
+      let realOriginalGetUserMedia = null;
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(
+          navigator.mediaDevices
+        );
+      }
+
+      (function () {
+        if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+          try {
+            Object.defineProperty(
+              navigator.mediaDevices.__proto__,
+              "getUserMedia",
+              {
+                get: function () {
+                  return undefined; // Or throw an error
+                },
+                configurable: false,
+              }
+            );
+          } catch (error) {
+            console.error("Error defining prototype getter:", error);
+          }
+        }
+      })();
+
+      (function () {
+        const pendingMediaResolvers = {};
+        let nextMediaPromiseId = 0;
+
+        function requestMediaPermissions(constraints) {
+          const mediaPromiseId = nextMediaPromiseId++;
+          const promise = new Promise((resolve, reject) => {
+            pendingMediaResolvers[mediaPromiseId] = (granted) => {
+              delete pendingMediaResolvers[mediaPromiseId];
+              resolve(granted);
+            };
+          });
+
+          window.parent.postMessage(
+            {
+              type: "requestMediaPermission",
+              constraints: constraints,
+              promiseId: mediaPromiseId,
+            },
+            "*"
+          );
+
+          return promise;
+        }
+
+        let originalGetUserMedia = realOriginalGetUserMedia;
+
+        function interceptGetUserMedia() {
+          if (navigator.mediaDevices) {
+            Object.defineProperty(navigator.mediaDevices, "getUserMedia", {
+              value: function (constraints) {
+                return requestMediaPermissions(constraints).then((granted) => {
+                  if (granted) {
+                    if (originalGetUserMedia) {
+                      return originalGetUserMedia(constraints);
+                    } else {
+                      throw new Error("Original getUserMedia not available.");
+                    }
+                  } else {
+                    throw new DOMException(
+                      "Permission denied",
+                      "NotAllowedError"
+                    );
+                  }
+                });
+              },
+              writable: false,
+              configurable: false,
+            });
+          }
+        }
+
+        interceptGetUserMedia();
+
+        const observer = new MutationObserver(function (
+          mutationsList,
+          observer
+        ) {
+          for (const mutation of mutationsList) {
+            if (
+              mutation.type === "reconfigured" &&
+              mutation.name === "getUserMedia" &&
+              mutation.object === navigator.mediaDevices
+            ) {
+              interceptGetUserMedia();
+            } else if (
+              mutation.type === "attributes" &&
+              mutation.attributeName === "getUserMedia" &&
+              mutation.target === navigator.mediaDevices
+            ) {
+              interceptGetUserMedia();
+            } else if (mutation.type === "childList" && mutation.addedNodes) {
+              mutation.addedNodes.forEach((node) => {
+                if (node === navigator.mediaDevices) {
+                  interceptGetUserMedia();
+                }
+              });
+            }
+          }
+        });
+
+        function interceptSpeechRecognition() {
+          if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+            return;
+          }
+
+          const OriginalSpeechRecognition =
+            window.SpeechRecognition || window.webkitSpeechRecognition;
+
+          const SpeechRecognitionWrapper = function (...args) {
+            const recognizer = new OriginalSpeechRecognition(...args);
+            const originalStart = recognizer.start.bind(recognizer);
+
+            recognizer.start = function () {
+              requestMediaPermissions({ audio: true }).then((granted) => {
+                if (granted) {
+                  originalStart();
+                } else {
+                  const errorEvent = new SpeechRecognitionErrorEvent("error");
+                  errorEvent.error = "not-allowed"; // This is the standard error for permission denial.
+                  recognizer.dispatchEvent(errorEvent);
+                }
+              });
+            };
+
+            return recognizer;
+          };
+
+          SpeechRecognitionWrapper.prototype =
+            OriginalSpeechRecognition.prototype;
+          SpeechRecognitionWrapper.prototype.constructor =
+            SpeechRecognitionWrapper;
+
+          if (window.SpeechRecognition) {
+            window.SpeechRecognition = SpeechRecognitionWrapper;
+          }
+          if (window.webkitSpeechRecognition) {
+            window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+          }
+        }
+
+        interceptSpeechRecognition();
+
+        window.addEventListener("message", function (event) {
+          if (event.data) {
+            if (event.data.type === "resolveMediaPermission") {
+              const { promiseId, granted } = event.data;
+              if (pendingMediaResolvers[promiseId]) {
+                pendingMediaResolvers[promiseId](granted);
+              }
+            }
+          }
+        });
+      })();
+    </script>
+    <script
+      ws-interception-config='{"parentOrigin":"https://gemini.google.com","proxiedDomains":[]}'
+      data-bard-client-injected="true"
+    >
+      (function () {
+        "use strict";
+        var u =
+          typeof Object.defineProperties == "function"
+            ? Object.defineProperty
+            : function (b, d, e) {
+                if (b == Array.prototype || b == Object.prototype) return b;
+                b[d] = e.value;
+                return b;
+              };
+        function v(b) {
+          b = [
+            "object" == typeof globalThis && globalThis,
+            b,
+            "object" == typeof window && window,
+            "object" == typeof self && self,
+            "object" == typeof global && global,
+          ];
+          for (var d = 0; d < b.length; ++d) {
+            var e = b[d];
+            if (e && e.Math == Math) return e;
+          }
+          throw Error("Cannot find global object");
+        }
+        var w = v(this);
+        function y(b, d) {
+          if (d)
+            a: {
+              var e = w;
+              b = b.split(".");
+              for (var h = 0; h < b.length - 1; h++) {
+                var k = b[h];
+                if (!(k in e)) break a;
+                e = e[k];
+              }
+              b = b[b.length - 1];
+              h = e[b];
+              d = d(h);
+              d != h &&
+                d != null &&
+                u(e, b, { configurable: !0, writable: !0, value: d });
+            }
+        }
+        function z(b) {
+          function d(h) {
+            return b.next(h);
+          }
+          function e(h) {
+            return b.throw(h);
+          }
+          return new Promise(function (h, k) {
+            function m(n) {
+              n.done
+                ? h(n.value)
+                : Promise.resolve(n.value).then(d, e).then(m, k);
+            }
+            m(b.next());
+          });
+        }
+        y("globalThis", function (b) {
+          return b || w;
+        }); /*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+        function A(b, d) {
+          function e() {}
+          e.prototype = d.prototype;
+          b.j = d.prototype;
+          b.prototype = new e();
+          b.prototype.constructor = b;
+          b.h = function (h, k, m) {
+            for (
+              var n = Array(arguments.length - 2), p = 2;
+              p < arguments.length;
+              p++
+            )
+              n[p - 2] = arguments[p];
+            return d.prototype[k].apply(h, n);
+          };
+        }
+        function B(b, d, e = "*") {
+          function h(a) {
+            if (typeof a === "string") return F.encode(a).buffer;
+            if (a instanceof ArrayBuffer) return a.slice(0);
+            if (ArrayBuffer.isView(a))
+              return a.buffer.slice(a.byteOffset, a.byteOffset + a.byteLength);
+            throw Error("Invalid data type");
+          }
+          function k(a) {
+            a = h(a);
+            var f = { type: "send", data: new Uint8Array(a) },
+              g;
+            (g = r) == null || g.postMessage(f, [a]);
+          }
+          function m() {
+            if (!r) throw Error("Data port not captured yet.");
+            r.onmessage = (a) => {
+              if (a.data.type === "message") {
+                a = new MessageEvent("message", {
+                  data: G.decode(a.data.data),
+                });
+                let f;
+                (f = c.onmessage) == null || f.call(c, a);
+                c.dispatchEvent(a);
+              }
+            };
+          }
+          function n() {
+            if (!t) throw Error("Control port not captured yet.");
+            t.onmessage = (a) => {
+              switch (a.data.type) {
+                case "open":
+                  l = 1;
+                  var f = new Event("open"),
+                    g;
+                  (g = c.onopen) == null || g.call(c, f);
+                  c.dispatchEvent(f);
+                  q.forEach((H) => {
+                    k(H);
+                  });
+                  q = [];
+                  break;
+                case "close":
+                  g = a.data;
+                  l = 3;
+                  g = new CloseEvent("close", {
+                    code: g.code,
+                    reason: g.reason,
+                    wasClean: g.wasClean,
+                  });
+                  (f = c.onclose) == null || f.call(c, g);
+                  c.dispatchEvent(g);
+                  break;
+                case "error":
+                  l = 3;
+                  f = new Event("error");
+                  let x;
+                  (x = c.onerror) == null || x.call(c, f);
+                  c.dispatchEvent(f);
+              }
+            };
+          }
+          function p(a) {
+            return z(
+              (function* () {
+                var f = new MessageChannel();
+                t = f.port1;
+                var g = new MessageChannel();
+                r = g.port1;
+                n();
+                m();
+                window.parent.postMessage(
+                  {
+                    type: "websocket_open",
+                    portOrdering: ["control", "data"],
+                    url: b,
+                    protocols: a || [],
+                    connectionId: I,
+                  },
+                  e,
+                  [f.port2, g.port2]
+                );
+              })()
+            );
+          }
+          var c = Reflect.construct(EventTarget, [], new.target);
+          c.CONNECTING = 0;
+          c.OPEN = 1;
+          c.CLOSING = 2;
+          c.CLOSED = 3;
+          c.url = b;
+          c.binaryType = "arraybuffer";
+          c.protocol = "";
+          c.i = "";
+          var l = 0,
+            t = null,
+            r = null,
+            q = [],
+            F = new TextEncoder(),
+            G = new TextDecoder();
+          c.onopen = null;
+          c.onmessage = null;
+          c.onclose = null;
+          c.onerror = null;
+          Object.defineProperty(c, "readyState", {
+            get: () => l,
+            enumerable: !0,
+            configurable: !0,
+          });
+          Object.defineProperty(c, "bufferedAmount", {
+            get: () => {
+              var a = 0;
+              q.forEach((f) => {
+                a += typeof f === "string" ? f.length : f.byteLength;
+              });
+              return a;
+            },
+            enumerable: !0,
+            configurable: !0,
+          });
+          var I = (function () {
+            var a;
+            return ((a = globalThis.crypto) == null ? 0 : a.randomUUID)
+              ? globalThis.crypto.randomUUID()
+              : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (f) => {
+                  var g = (Math.random() * 16) | 0;
+                  return (f === "x" ? g : (g & 3) | 8).toString(16);
+                });
+          })();
+          c.send = (a) => {
+            if (l === 1)
+              a instanceof Blob
+                ? a.arrayBuffer().then((f) => {
+                    k(f);
+                  })
+                : k(a);
+            else if (l === 0)
+              if (typeof a === "string") q.push(a);
+              else if (a instanceof ArrayBuffer || ArrayBuffer.isView(a))
+                q.push(h(a));
+              else
+                throw Error(
+                  "Sending Blob is not supported before the connection is open."
+                );
+            else
+              console.debug(
+                "WebSocket send called in CLOSING or CLOSED state; ignored."
+              );
+          };
+          c.close = (a = 1e3, f = "") => {
+            if (l !== 2 && l !== 3) {
+              l = 2;
+              a = { type: "close", code: a, reason: f, wasClean: a === 1e3 };
+              var g;
+              (g = t) == null || g.postMessage(a);
+            }
+          };
+          Promise.resolve().then(() => p(d));
+          return c;
+        }
+        A(B, EventTarget);
+        var C = document.currentScript,
+          D = C == null ? void 0 : C.getAttribute("ws-interception-config");
+        if (!D)
+          throw Error(
+            "WebSocket Interceptor: Missing ws-interception-config attribute in the script tag."
+          );
+        var E = JSON.parse(D);
+        if (!E.parentOrigin || typeof E.parentOrigin !== "string")
+          throw Error(
+            "WebSocket Interceptor: Invalid parentOrigin in ws-interception-config"
+          );
+        (function (b) {
+          var d = Object.getOwnPropertyDescriptor(window, "WebSocket");
+          if (!d || d.writable || d.configurable)
+            (d = Object.assign(
+              function (e, h) {
+                try {
+                  let k = new URL(e).hostname;
+                  if (
+                    b.proxiedDomains.some((m) => k === m || k.endsWith(`.${m}`))
+                  )
+                    return new B(e, h, b.parentOrigin);
+                } catch (k) {
+                  throw (
+                    (window.parent.postMessage(
+                      {
+                        type: "websocket_blocked",
+                        url: e,
+                        reason: "blocked_invalid_url",
+                      },
+                      b.parentOrigin
+                    ),
+                    new DOMException(
+                      `WebSocket connection to '${e}' is not allowed in Canvas.`,
+                      "SecurityError"
+                    ))
+                  );
+                }
+                window.parent.postMessage(
+                  {
+                    type: "websocket_blocked",
+                    url: e,
+                    reason: "blocked_domain_not_allowlisted",
+                  },
+                  b.parentOrigin
+                );
+                throw new DOMException(
+                  `WebSocket connection to '${e}' is not allowed in Canvas.`,
+                  "SecurityError"
+                );
+              },
+              { CONNECTING: 0, OPEN: 1, CLOSING: 2, CLOSED: 3 }
+            )),
+              Object.defineProperty(window, "WebSocket", {
+                value: d,
+                writable: !1,
+                configurable: !1,
+              });
+        })({
+          proxiedDomains: E.proxiedDomains || [],
+          parentOrigin: E.parentOrigin,
+        });
+      }).call(this);
+    </script>
+    <script data-bard-client-injected="true">
+      (function (modelInformation) {
+        const originalFetch = window.fetch;
+        // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+        let googleLlmBaseApiUrls = [
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.textModelName +
+            ":streamGenerateContent",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.textModelName +
+            ":generateContent",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.imageModelName +
+            ":predict",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.imageModelName +
+            ":predictLongRunning",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.imageEditModelName +
+            ":generateContent",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.imageTransformModelName +
+            ":generateContent",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.videoModelName +
+            ":predict",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.videoModelName +
+            ":predictLongRunning",
+          "https://generativelanguage.googleapis.com/v1beta/models/" +
+            modelInformation.ttsModelName +
+            ":generateContent",
+        ];
+        modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+          googleLlmBaseApiUrls.push(
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":streamGenerateContent",
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":generateContent"
+          );
+        });
+        modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+          googleLlmBaseApiUrls.push(
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":predict",
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":predictLongRunning",
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":generateContent",
+            "https://generativelanguage.googleapis.com/v1beta/models/" +
+              modelName +
+              ":streamGenerateContent"
+          );
+        });
+        modelInformation.deprecatedGenerateImageModelNames.forEach(
+          (modelName) => {
+            googleLlmBaseApiUrls.push(
+              "https://generativelanguage.googleapis.com/v1beta/models/" +
+                modelName +
+                ":generateContent",
+              "https://generativelanguage.googleapis.com/v1beta/models/" +
+                modelName +
+                ":streamGenerateContent"
+            );
+          }
+        );
+        modelInformation.deprecatedImageTransformModelNames.forEach(
+          (modelName) => {
+            googleLlmBaseApiUrls.push(
+              "https://generativelanguage.googleapis.com/v1beta/models/" +
+                modelName +
+                ":generateContent",
+              "https://generativelanguage.googleapis.com/v1beta/models/" +
+                modelName +
+                ":streamGenerateContent"
+            );
+          }
+        );
+
+        const pendingFetchResolvers = {};
+        let nextPromiseId = 0;
+
+        function handleStringInput(input, optionsArgument) {
+          const actualUrl = input;
+          const fetchCallArgs = [actualUrl, optionsArgument];
+          const effectiveOptions = optionsArgument || {};
+          const bodyForApiKeyCheck = effectiveOptions.body;
+          const bodyForPostMessage = effectiveOptions.body;
+          return {
+            actualUrl,
+            fetchCallArgs,
+            effectiveOptions,
+            bodyForApiKeyCheck,
+            bodyForPostMessage,
+          };
+        }
+
+        function handleRequestInput(input, optionsArgument) {
+          const actualUrl = input.url;
+          const fetchCallArgs = [input, optionsArgument];
+          const effectiveOptions = {
+            method: input.method,
+            headers: new Headers(input.headers),
+          };
+          let bodyForApiKeyCheck;
+          let bodyForPostMessage;
+
+          if (optionsArgument) {
+            if (optionsArgument.method)
+              effectiveOptions.method = optionsArgument.method;
+            if (optionsArgument.headers)
+              effectiveOptions.headers = new Headers(optionsArgument.headers);
+            if ("body" in optionsArgument) {
+              bodyForApiKeyCheck = optionsArgument.body;
+              bodyForPostMessage = optionsArgument.body;
+            } else {
+              bodyForApiKeyCheck = undefined;
+              bodyForPostMessage = input.body;
+            }
+          } else {
+            bodyForApiKeyCheck = undefined;
+            bodyForPostMessage = input.body;
+          }
+          return {
+            actualUrl,
+            fetchCallArgs,
+            effectiveOptions,
+            bodyForApiKeyCheck,
+            bodyForPostMessage,
+          };
+        }
+
+        window.fetch = function (input, optionsArgument) {
+          let actualUrl;
+          let fetchCallArgs;
+          let effectiveOptions = {};
+          let bodyForApiKeyCheck;
+          let bodyForPostMessage;
+
+          if (typeof input === "string") {
+            ({
+              actualUrl,
+              fetchCallArgs,
+              effectiveOptions,
+              bodyForApiKeyCheck,
+              bodyForPostMessage,
+            } = handleStringInput(input, optionsArgument));
+          } else if (input instanceof Request) {
+            ({
+              actualUrl,
+              fetchCallArgs,
+              effectiveOptions,
+              bodyForApiKeyCheck,
+              bodyForPostMessage,
+            } = handleRequestInput(input, optionsArgument));
+          } else {
+            return originalFetch.apply(window, [input, optionsArgument]);
+          }
+
+          effectiveOptions.method = effectiveOptions.method || "GET";
+          if (!effectiveOptions.headers) {
+            effectiveOptions.headers = new Headers();
+          }
+
+          if (
+            typeof actualUrl === "string" &&
+            googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))
+          ) {
+            let apiKeyIsNull = true;
+
+            const regex = new RegExp("models/([^:]+)");
+            const modelNameMatch = actualUrl.match(regex);
+            const modelName = modelNameMatch
+              ? modelNameMatch[1]
+              : "unspecified";
+
+            try {
+              const urlObject = new URL(actualUrl); // Use URL object for robust parsing
+              const apiKeyParam = urlObject.searchParams.get("key");
+              if (apiKeyParam) {
+                apiKeyIsNull = false;
+              }
+            } catch (e) {
+              // Continue checks even if URL parsing fails
+            }
+
+            if (apiKeyIsNull && effectiveOptions.headers) {
+              const h = new Headers(effectiveOptions.headers);
+              const apiKeyHeaderValue =
+                h.get("X-API-Key") || h.get("x-api-key");
+              if (apiKeyHeaderValue) {
+                apiKeyIsNull = false;
+                return originalFetch.apply(window, fetchCallArgs);
+              }
+            }
+
+            if (
+              apiKeyIsNull &&
+              effectiveOptions.method &&
+              ["POST", "PUT", "PATCH"].includes(
+                effectiveOptions.method.toUpperCase()
+              ) &&
+              typeof bodyForApiKeyCheck === "string"
+            ) {
+              try {
+                const bodyData = JSON.parse(bodyForApiKeyCheck);
+                if (bodyData && bodyData.apiKey) {
+                  apiKeyIsNull = false;
+                  return originalFetch.apply(window, fetchCallArgs);
+                }
+              } catch (e) {
+                // Ignore JSON parsing errors
+              }
+            }
+
+            if (apiKeyIsNull) {
+              const promiseId = nextPromiseId++;
+              const promise = new Promise((resolve) => {
+                pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+                  delete pendingFetchResolvers[promiseId];
+                  resolve(resolvedResponse);
+                };
+              });
+
+              let serializedBodyForPostMessage;
+              if (
+                typeof bodyForPostMessage === "string" ||
+                bodyForPostMessage == null
+              ) {
+                serializedBodyForPostMessage = bodyForPostMessage;
+              } else if (bodyForPostMessage instanceof ReadableStream) {
+                serializedBodyForPostMessage = null;
+              } else {
+                try {
+                  serializedBodyForPostMessage =
+                    JSON.stringify(bodyForPostMessage);
+                } catch (e) {
+                  serializedBodyForPostMessage = null;
+                }
+              }
+
+              const messageOptions = {
+                method: effectiveOptions.method,
+                headers: Object.fromEntries(
+                  new Headers(effectiveOptions.headers).entries()
+                ),
+                body: serializedBodyForPostMessage,
+              };
+
+              window.parent.postMessage(
+                {
+                  type: "requestFetch",
+                  url: actualUrl,
+                  modelName: modelName,
+                  options: messageOptions,
+                  promiseId: promiseId,
+                },
+                "*"
+              );
+
+              return promise;
+            }
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+          return originalFetch.apply(window, fetchCallArgs);
+        };
+
+        window.addEventListener("message", function (event) {
+          if (event.data && event.data.type === "resolveFetch") {
+            const { promiseId, response } = event.data;
+            if (pendingFetchResolvers[promiseId]) {
+              try {
+                const reconstructedResponse = new Response(response.body, {
+                  status: response.status,
+                  statusText: response.statusText,
+                  headers: new Headers(response.headers),
+                });
+                pendingFetchResolvers[promiseId](reconstructedResponse);
+              } catch (error) {
+                pendingFetchResolvers[promiseId](
+                  new Response(null, {
+                    status: 500,
+                    statusText: "Interceptor Response Reconstruction Error",
+                  })
+                );
+              }
+            }
+          }
+        });
+      })({
+        textModelName: "gemini-3-flash-preview",
+        imageModelName: "imagen-4.0-generate-001",
+        imageEditModelName: "gemini-3.1-flash-image",
+        imageTransformModelName: "gemini-3-pro-image",
+        videoModelName: "veo-2.0-generate-001",
+        ttsModelName: "gemini-2.5-flash-preview-tts",
+        deprecatedTextModelNames: [
+          "gemini-2.0-flash",
+          "gemini-2.5-flash",
+          "gemini-2.5-flash-preview-04-17",
+          "gemini-2.5-flash-preview-05-20",
+          "gemini-2.5-flash-preview-09-2025",
+        ],
+        deprecatedImageModelNames: [
+          "imagen-3.0-generate-001",
+          "imagen-3.0-generate-002",
+        ],
+        deprecatedGenerateImageModelNames: [
+          "gemini-2.5-flash-image-preview",
+          "gemini-2.5-flash-image",
+          "gemini-3.1-flash-image-preview",
+        ],
+        deprecatedImageTransformModelNames: [
+          "gemini-3-pro-image-preview-11-2025",
+        ],
+      });
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        function normalizeSlug(str) {
+          try {
+            return str
+              .trim()
+              .toLowerCase()
+              .replace(/[^p{L}p{N}s_-]/gu, "")
+              .replace(/s+/g, "-");
+          } catch (e) {
+            return str
+              .trim()
+              .toLowerCase()
+              .replace(/[^a-z0-9s_-]/g, "")
+              .replace(/s+/g, "-");
+          }
+        }
+
+        function findTargetElement(hash) {
+          if (!hash || hash === "#") {
+            return null;
+          }
+          const rawId = hash.startsWith("#") ? hash.slice(1) : hash;
+          let decodedId = rawId;
+          try {
+            decodedId = decodeURIComponent(rawId);
+          } catch (e) {
+            // Ignore URI malformed errors.
+          }
+
+          // 1. Direct ID match (raw and decoded).
+          let target =
+            document.getElementById(rawId) ||
+            document.getElementById(decodedId);
+          if (target) {
+            return target;
+          }
+
+          // 2. Name attribute match (<a name="...">).
+          try {
+            if (typeof CSS !== "undefined" && CSS.escape) {
+              target =
+                document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
+                document.querySelector(
+                  '[name="' + CSS.escape(decodedId) + '"]'
+                );
+            } else {
+              const namedElements = document.getElementsByName(rawId);
+              if (namedElements && namedElements.length > 0) {
+                return namedElements[0];
+              }
+            }
+          } catch (e) {
+            // Ignore querySelector syntax errors.
+          }
+          if (target) {
+            return target;
+          }
+
+          // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
+          const targetSlug = normalizeSlug(decodedId);
+          if (targetSlug) {
+            for (const heading of document.querySelectorAll(
+              "h1, h2, h3, h4, h5, h6"
+            )) {
+              if (normalizeSlug(heading.textContent || "") === targetSlug) {
+                return heading;
+              }
+            }
+          }
+
+          return null;
+        }
+
+        document.addEventListener(
+          "click",
+          function (event) {
+            const target = event.target;
+            const anchor =
+              target && typeof target.closest === "function"
+                ? target.closest("a")
+                : null;
+            if (!anchor) {
+              return;
+            }
+
+            const href = anchor.getAttribute("href");
+            if (
+              !href ||
+              href.trim().toLowerCase().startsWith("javascript:") ||
+              anchor.hasAttribute("download")
+            ) {
+              return;
+            }
+
+            // Check if the link is an in-page hash / anchor link.
+            if (href.startsWith("#")) {
+              event.preventDefault();
+              const targetElement = findTargetElement(href);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+              return;
+            }
+
+            // Check if the URL has the same origin/pathname but with a hash.
+            try {
+              const url = new URL(anchor.href, window.location.href);
+              if (
+                url.hash &&
+                url.origin === window.location.origin &&
+                url.pathname === window.location.pathname
+              ) {
+                event.preventDefault();
+                const targetElement = findTargetElement(url.hash);
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+                return;
+              }
+            } catch (e) {
+              // Fall through if URL parsing fails.
+            }
+
+            // For all external or full navigation links, prevent iframe-level navigation
+            // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
+            // safely in a new tab/window.
+            if (anchor.target !== "_blank") {
+              event.preventDefault();
+              window.open(anchor.href, "_blank", "noopener,noreferrer");
+            }
+          },
+          { capture: true }
+        );
+      })();
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        "use strict";
+        function a() {
+          window.parent.postMessage({ type: "interaction" }, "*");
+        }
+        window.addEventListener("click", a, { capture: !0, passive: !0 });
+        window.addEventListener("touchstart", a, { capture: !0, passive: !0 });
+        window.addEventListener("keydown", a, { capture: !0, passive: !0 });
+      }).call(this);
+    </script>
+    <script data-bard-client-injected="true">
+      (function () {
+        const originalConsoleLog = console.log;
+        const originalConsoleError = console.error;
+
+        /**
+         * Normalizes an error event or a promise rejection reason into a structured error object.
+         * @param {*} errorEventOrReason The error object or reason.
+         * @return {object} Structured error data { message, name, stack }.
+         */
+        function getErrorObject(errorEventOrReason) {
+          if (errorEventOrReason instanceof Error) {
+            return {
+              message: errorEventOrReason.message,
+              name: errorEventOrReason.name,
+              stack: errorEventOrReason.stack,
+            };
+          }
+          // Fallback for non-Error objects.
+          try {
+            return {
+              message: JSON.stringify(errorEventOrReason),
+              name: "UnknownErrorType",
+              stack: null,
+            };
+          } catch (e) {
+            return {
+              message: String(errorEventOrReason),
+              name: "UnknownErrorTypeNonStringifiable",
+              stack: null,
+            };
+          }
+        }
+
+        /**
+         * Converts an array of arguments (from log/error) into a single string.
+         * Handles Error objects specially to include their message and stack.
+         * @param {Array<*>} args - Arguments passed to console methods.
+         * @return {string} A string representation of the arguments.
+         */
+        function stringifyArgs(args) {
+          return args
+            .map((arg) => {
+              if (arg instanceof Error) {
+                const { message, stack } = arg;
+                return `Error: ${message}${stack ? "\nStack: " + stack : ""}`;
+              }
+              if (typeof arg === "object" && arg !== null) {
+                try {
+                  return JSON.stringify(arg);
+                } catch (error) {
+                  return "[Circular Object]";
+                }
+              } else {
+                return String(arg);
+              }
+            })
+            .join(" ");
+        }
+
+        console.log = function (...args) {
+          const logString = stringifyArgs(args);
+          window.parent.postMessage({ type: "log", message: logString }, "*");
+          originalConsoleLog.apply(console, args);
+        };
+
+        console.error = function (...args) {
+          let errorData;
+          if (args.length > 0 && args[0] instanceof Error) {
+            const err = args[0];
+            // If the first arg is an Error, capture its details.
+            errorData = {
+              type: "error",
+              source: "CONSOLE_ERROR",
+              ...getErrorObject(err),
+              rawArgsString: stringifyArgs(args.slice(1)),
+              timestamp: new Date().toISOString(),
+            };
+          } else {
+            // If not an Error object, treat all args as a general error message.
+            errorData = {
+              type: "error",
+              source: "CONSOLE_ERROR",
+              message: stringifyArgs(args),
+              name: "ConsoleLoggedError",
+              stack: null,
+              timestamp: new Date().toISOString(),
+            };
+          }
+          window.parent.postMessage(errorData, "*");
+          originalConsoleError.apply(console, args);
+        };
+
+        // Listen for global unhandled synchronous errors.
+        window.addEventListener("error", function (event) {
+          const errorDetails = event.error
+            ? getErrorObject(event.error)
+            : {
+                message: event.message,
+                name: "GlobalError",
+                stack: null,
+                filename: event.filename,
+                lineno: event.lineno,
+                colno: event.colno,
+              };
+
+          window.parent.postMessage(
+            {
+              type: "error",
+              source: "global",
+              ...errorDetails,
+              message: errorDetails.message || event.message,
+              timestamp: new Date().toISOString(),
+            },
+            "*"
+          );
+        });
+
+        // Listen for unhandled promise rejections (asynchronous errors).
+        window.addEventListener("unhandledrejection", function (event) {
+          const errorDetails = getErrorObject(event.reason);
+
+          window.parent.postMessage(
+            {
+              type: "error",
+              source: "unhandledrejection",
+              ...errorDetails,
+              message: errorDetails.message || "Unhandled Promise Rejection",
+              timestamp: new Date().toISOString(),
+            },
+            "*"
+          );
+        });
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Village &amp; Main Area Directory Finder</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .highlight {
+        background-color: #fef08a;
+        color: #854d0e;
+        font-weight: 600;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      } /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden]:where(:not([hidden="until-found"])) {
+        display: none;
+      }
+      .pointer-events-none {
+        pointer-events: none;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .relative {
+        position: relative;
+      }
+      .sticky {
+        position: sticky;
+      }
+      .inset-y-0 {
+        top: 0px;
+        bottom: 0px;
+      }
+      .bottom-6 {
+        bottom: 1.5rem;
+      }
+      .left-0 {
+        left: 0px;
+      }
+      .right-0 {
+        right: 0px;
+      }
+      .right-6 {
+        right: 1.5rem;
+      }
+      .top-0 {
+        top: 0px;
+      }
+      .z-30 {
+        z-index: 30;
+      }
+      .z-40 {
+        z-index: 40;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mb-1\.5 {
+        margin-bottom: 0.375rem;
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-3 {
+        margin-bottom: 0.75rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mt-1 {
+        margin-top: 0.25rem;
+      }
+      .block {
+        display: block;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .flex {
+        display: flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .hidden {
+        display: none;
+      }
+      .h-10 {
+        height: 2.5rem;
+      }
+      .h-12 {
+        height: 3rem;
+      }
+      .h-16 {
+        height: 4rem;
+      }
+      .h-2 {
+        height: 0.5rem;
+      }
+      .h-3\.5 {
+        height: 0.875rem;
+      }
+      .h-4 {
+        height: 1rem;
+      }
+      .h-5 {
+        height: 1.25rem;
+      }
+      .h-6 {
+        height: 1.5rem;
+      }
+      .h-8 {
+        height: 2rem;
+      }
+      .max-h-24 {
+        max-height: 6rem;
+      }
+      .max-h-60 {
+        max-height: 15rem;
+      }
+      .min-h-screen {
+        min-height: 100vh;
+      }
+      .w-10 {
+        width: 2.5rem;
+      }
+      .w-12 {
+        width: 3rem;
+      }
+      .w-16 {
+        width: 4rem;
+      }
+      .w-2 {
+        width: 0.5rem;
+      }
+      .w-3\.5 {
+        width: 0.875rem;
+      }
+      .w-4 {
+        width: 1rem;
+      }
+      .w-5 {
+        width: 1.25rem;
+      }
+      .w-6 {
+        width: 1.5rem;
+      }
+      .w-8 {
+        width: 2rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .min-w-full {
+        min-width: 100%;
+      }
+      .max-w-7xl {
+        max-width: 80rem;
+      }
+      .max-w-md {
+        max-width: 28rem;
+      }
+      .flex-1 {
+        flex: 1 1 0%;
+      }
+      .translate-y-20 {
+        --tw-translate-y: 5rem;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .transform {
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .gap-1\.5 {
+        gap: 0.375rem;
+      }
+      .gap-2 {
+        gap: 0.5rem;
+      }
+      .gap-3 {
+        gap: 0.75rem;
+      }
+      .gap-4 {
+        gap: 1rem;
+      }
+      .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+        margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+      .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+      }
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+      }
+      .divide-y > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-y-reverse: 0;
+        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+        border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+      }
+      .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-opacity: 1;
+        border-color: rgb(241 245 249 / var(--tw-divide-opacity, 1));
+      }
+      .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-opacity: 1;
+        border-color: rgb(226 232 240 / var(--tw-divide-opacity, 1));
+      }
+      .self-end {
+        align-self: flex-end;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-x-auto {
+        overflow-x: auto;
+      }
+      .overflow-y-auto {
+        overflow-y: auto;
+      }
+      .rounded-2xl {
+        border-radius: 1rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-xl {
+        border-radius: 0.75rem;
+      }
+      .border {
+        border-width: 1px;
+      }
+      .border-b {
+        border-bottom-width: 1px;
+      }
+      .border-t {
+        border-top-width: 1px;
+      }
+      .border-dashed {
+        border-style: dashed;
+      }
+      .border-emerald-400\/40 {
+        border-color: rgb(52 211 153 / 0.4);
+      }
+      .border-emerald-500\/30 {
+        border-color: rgb(16 185 129 / 0.3);
+      }
+      .border-indigo-100 {
+        --tw-border-opacity: 1;
+        border-color: rgb(224 231 255 / var(--tw-border-opacity, 1));
+      }
+      .border-indigo-400\/30 {
+        border-color: rgb(129 140 248 / 0.3);
+      }
+      .border-indigo-700\/50 {
+        border-color: rgb(67 56 202 / 0.5);
+      }
+      .border-slate-100 {
+        --tw-border-opacity: 1;
+        border-color: rgb(241 245 249 / var(--tw-border-opacity, 1));
+      }
+      .border-slate-200 {
+        --tw-border-opacity: 1;
+        border-color: rgb(226 232 240 / var(--tw-border-opacity, 1));
+      }
+      .border-slate-200\/80 {
+        border-color: rgb(226 232 240 / 0.8);
+      }
+      .border-slate-200\/90 {
+        border-color: rgb(226 232 240 / 0.9);
+      }
+      .border-slate-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(203 213 225 / var(--tw-border-opacity, 1));
+      }
+      .bg-emerald-500 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+      }
+      .bg-emerald-500\/20 {
+        background-color: rgb(16 185 129 / 0.2);
+      }
+      .bg-emerald-600 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+      }
+      .bg-indigo-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(224 231 255 / var(--tw-bg-opacity, 1));
+      }
+      .bg-indigo-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(238 242 255 / var(--tw-bg-opacity, 1));
+      }
+      .bg-indigo-500\/30 {
+        background-color: rgb(99 102 241 / 0.3);
+      }
+      .bg-indigo-950\/60 {
+        background-color: rgb(30 27 75 / 0.6);
+      }
+      .bg-slate-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+      }
+      .bg-slate-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+      }
+      .bg-slate-900 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+      }
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+      }
+      .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      }
+      .from-indigo-900 {
+        --tw-gradient-from: #312e81 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(49 46 129 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      }
+      .via-indigo-800 {
+        --tw-gradient-to: rgb(55 48 163 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from),
+          #3730a3 var(--tw-gradient-via-position), var(--tw-gradient-to);
+      }
+      .to-blue-900 {
+        --tw-gradient-to: #1e3a8a var(--tw-gradient-to-position);
+      }
+      .p-1 {
+        padding: 0.25rem;
+      }
+      .p-10 {
+        padding: 2.5rem;
+      }
+      .p-12 {
+        padding: 3rem;
+      }
+      .p-4 {
+        padding: 1rem;
+      }
+      .p-5 {
+        padding: 1.25rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-2\.5 {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+      }
+      .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .px-3\.5 {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .py-0\.5 {
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+      }
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .py-1\.5 {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
+      .py-2\.5 {
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+      }
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .pb-4 {
+        padding-bottom: 1rem;
+      }
+      .pl-10 {
+        padding-left: 2.5rem;
+      }
+      .pl-11 {
+        padding-left: 2.75rem;
+      }
+      .pl-3\.5 {
+        padding-left: 0.875rem;
+      }
+      .pr-1 {
+        padding-right: 0.25rem;
+      }
+      .pr-10 {
+        padding-right: 2.5rem;
+      }
+      .pr-3 {
+        padding-right: 0.75rem;
+      }
+      .pr-3\.5 {
+        padding-right: 0.875rem;
+      }
+      .pr-9 {
+        padding-right: 2.25rem;
+      }
+      .pt-2 {
+        padding-top: 0.5rem;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-\[11px\] {
+        font-size: 11px;
+      }
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .text-\[10px\] {
+        font-size: 10px;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .tracking-tight {
+        letter-spacing: -0.025em;
+      }
+      .tracking-wider {
+        letter-spacing: 0.05em;
+      }
+      .text-emerald-300 {
+        --tw-text-opacity: 1;
+        color: rgb(110 231 183 / var(--tw-text-opacity, 1));
+      }
+      .text-emerald-400 {
+        --tw-text-opacity: 1;
+        color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-200 {
+        --tw-text-opacity: 1;
+        color: rgb(199 210 254 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-300 {
+        --tw-text-opacity: 1;
+        color: rgb(165 180 252 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-500 {
+        --tw-text-opacity: 1;
+        color: rgb(99 102 241 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-600 {
+        --tw-text-opacity: 1;
+        color: rgb(79 70 229 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-700 {
+        --tw-text-opacity: 1;
+        color: rgb(67 56 202 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-800 {
+        --tw-text-opacity: 1;
+        color: rgb(55 48 163 / var(--tw-text-opacity, 1));
+      }
+      .text-indigo-900 {
+        --tw-text-opacity: 1;
+        color: rgb(49 46 129 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-400 {
+        --tw-text-opacity: 1;
+        color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-500 {
+        --tw-text-opacity: 1;
+        color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-600 {
+        --tw-text-opacity: 1;
+        color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-700 {
+        --tw-text-opacity: 1;
+        color: rgb(51 65 85 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-800 {
+        --tw-text-opacity: 1;
+        color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+      }
+      .text-slate-900 {
+        --tw-text-opacity: 1;
+        color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+      }
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+      }
+      .antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .opacity-0 {
+        opacity: 0;
+      }
+      .shadow-2xl {
+        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-inner {
+        --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-lg {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-sm {
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-xl {
+        --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+          0 8px 10px -6px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .backdrop-blur {
+        --tw-backdrop-blur: blur(8px);
+        -webkit-backdrop-filter: var(--tw-backdrop-blur)
+          var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+          var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
+          var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+          var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+          var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+          var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+          var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+          var(--tw-backdrop-sepia);
+      }
+      .transition {
+        transition-property: color, background-color, border-color, fill, stroke,
+          opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+          -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter, -webkit-text-decoration-color,
+          -webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .duration-300 {
+        transition-duration: 300ms;
+      }
+      .placeholder\:text-slate-400::placeholder {
+        --tw-text-opacity: 1;
+        color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+      }
+      .hover\:border-indigo-300:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(165 180 252 / var(--tw-border-opacity, 1));
+      }
+      .hover\:bg-emerald-600:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-emerald-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(4 120 87 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-indigo-50:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(238 242 255 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-slate-50:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:bg-indigo-50\/50:hover {
+        background-color: rgb(238 242 255 / 0.5);
+      }
+      .hover\:text-indigo-700:hover {
+        --tw-text-opacity: 1;
+        color: rgb(67 56 202 / var(--tw-text-opacity, 1));
+      }
+      .hover\:text-slate-600:hover {
+        --tw-text-opacity: 1;
+        color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+      }
+      .hover\:text-slate-900:hover {
+        --tw-text-opacity: 1;
+        color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+      }
+      .hover\:shadow-md:hover {
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+          0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .focus\:border-indigo-500:focus {
+        --tw-border-opacity: 1;
+        border-color: rgb(99 102 241 / var(--tw-border-opacity, 1));
+      }
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      .focus\:ring-indigo-500:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity, 1));
+      }
+      .active\:scale-95:active {
+        --tw-scale-x: 0.95;
+        --tw-scale-y: 0.95;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .disabled\:cursor-not-allowed:disabled {
+        cursor: not-allowed;
+      }
+      .disabled\:bg-slate-100:disabled {
+        --tw-bg-opacity: 1;
+        background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+      }
+      @media (min-width: 640px) {
+        .sm\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .sm\:flex-row {
+          flex-direction: row;
+        }
+        .sm\:px-6 {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+        .sm\:text-2xl {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        .sm\:text-sm {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .md\:col-span-5 {
+          grid-column: span 5 / span 5;
+        }
+        .md\:col-span-7 {
+          grid-column: span 7 / span 7;
+        }
+        .md\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .md\:flex-row {
+          flex-direction: row;
+        }
+        .md\:items-center {
+          align-items: center;
+        }
+        .md\:justify-between {
+          justify-content: space-between;
+        }
+        .md\:self-auto {
+          align-self: auto;
+        }
+      }
+      @media (min-width: 1024px) {
+        .lg\:grid-cols-4 {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .lg\:px-8 {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .catch((err) => console.error('PWA registration failed:', err));
+      });
+    }
+  </script>
+  <body
+    class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased"
+  >
+    <!-- Header Banner -->
+    <header
+      class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-900 text-white shadow-lg sticky top-0 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-indigo-500/30 flex items-center justify-center border border-indigo-400/30 shadow-inner"
+            >
+              <svg
+                class="w-6 h-6 text-indigo-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h1
+                class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2"
+              >
+                Village &amp; Area Directory
+                <span
+                  class="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                  >Official Records</span
+                >
+              </h1>
+              <p class="text-xs sm:text-sm text-indigo-200">
+                Search and discover villages mapped under main administrative
+                post offices
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Summary Stats Header -->
+          <div class="flex items-center gap-3 text-xs sm:text-sm font-medium">
+            <div
+              class="bg-indigo-950/60 backdrop-blur px-3 py-1.5 rounded-lg border border-indigo-700/50 flex items-center gap-2"
+            >
+              <span class="text-indigo-300">Offices:</span>
+              <span
+                class="font-bold text-white text-base"
+                id="stat-total-offices"
+                >44</span
+              >
+            </div>
+            <div
+              class="bg-indigo-950/60 backdrop-blur px-3 py-1.5 rounded-lg border border-indigo-700/50 flex items-center gap-2"
+            >
+              <span class="text-indigo-300">Cataloged Villages:</span>
+              <span
+                class="font-bold text-emerald-400 text-base"
+                id="stat-total-villages"
+                >4,315</span
+              >
+            </div>
+            <!-- Download Standalone HTML Button -->
+            <button
+              id="download-app-btn"
+              class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-3 py-1.5 rounded-lg shadow-sm border border-emerald-400/40 flex items-center gap-1.5 transition active:scale-95 cursor-pointer"
+              title="Download this complete app to share and open offline"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                ></path>
+              </svg>
+              <span>Download App</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-1">
+      <!-- Search Controls Card -->
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 mb-6 transition-all hover:shadow-md"
+      >
+        <!-- Mode Selection Tabs -->
+        <div
+          class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4 flex-wrap gap-2"
+        >
+          <div class="flex bg-slate-100 p-1 rounded-xl text-sm font-medium">
+            <button
+              id="mode-office-btn"
+              class="px-4 py-1.5 rounded-lg bg-white text-indigo-900 shadow-sm transition font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4 text-indigo-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+              Office to Villages Lookup
+            </button>
+            <button
+              id="mode-village-btn"
+              class="px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4 text-slate-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+              Find Village Across All Offices
+            </button>
+          </div>
+
+          <div class="text-xs text-slate-500 flex items-center gap-1.5">
+            <span
+              class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            Instant Local Search Engine Active
+          </div>
+        </div>
+
+        <!-- Office Search Container (Mode 1) -->
+        <div id="office-mode-container" class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            <!-- Main Area / Office Autocomplete -->
+            <div class="md:col-span-7 relative">
+              <label
+                for="office-input"
+                class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5"
+              >
+                1. Type or Select Main Office / Area
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="office-input"
+                  placeholder="Type office name (e.g., LALGANJ, DERWA, BIHAR, KUNDA, ATHEHA)..."
+                  autocomplete="off"
+                  class="w-full pl-11 pr-10 py-3 text-base rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition placeholder:text-slate-400 font-medium"
+                />
+                <div
+                  class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400"
+                >
+                  <svg
+                    class="w-5 h-5 text-indigo-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    ></path>
+                  </svg>
+                </div>
+                <button
+                  id="clear-office-btn"
+                  class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Autocomplete Suggestion Dropdown -->
+              <div
+                id="office-dropdown"
+                class="hidden absolute z-30 left-0 right-0 mt-1 max-h-60 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl custom-scrollbar py-1"
+              >
+                <!-- Dropdown items inserted dynamically -->
+              </div>
+            </div>
+
+            <!-- In-Office Village Filter Input -->
+            <div class="md:col-span-5">
+              <label
+                for="village-filter-input"
+                class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5"
+              >
+                2. Filter Villages within Selected Office
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="village-filter-input"
+                  placeholder="Type village name inside current office..."
+                  disabled=""
+                  class="w-full pl-10 pr-9 py-3 text-base rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition placeholder:text-slate-400 disabled:bg-slate-100 disabled:cursor-not-allowed"
+                />
+                <div
+                  class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <button
+                  id="clear-filter-btn"
+                  class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular / Quick Office Quick Tags -->
+          <div class="pt-2">
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="text-xs font-semibold text-slate-500 uppercase tracking-wider"
+                >Popular Offices:</span
+              >
+              <span class="text-[11px] text-slate-400"
+                >(Click to view instantly)</span
+              >
+            </div>
+            <div
+              id="quick-pills-container"
+              class="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto custom-scrollbar pr-1"
+            >
+              <button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>AJGARA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(51)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>ANTU</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(49)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>ATHEHA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(109)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>BABAGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(35)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>BABUGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(20)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>BARON</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(15)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>BHADRI</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(126)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>BIHAR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(231)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>DALIPPUR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(32)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>DARCHHUT</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(46)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>DERWA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(139)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>GARWARA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(144)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>GAURA RS</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(67)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>GMPUR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(190)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>HEERAGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(159)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>JAMTALI</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(56)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>JETHWARA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(173)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KAITHOLA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(132)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KALAKANKAR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(56)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KISHUNGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(127)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KM GANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(43)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KOHDAUR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(118)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>KUNDA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(201)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>LALGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(187)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>LALGOPALGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(120)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>MADHOGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(79)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>MANDHATA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(179)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>MAUAIMA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(334)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>ORAIYADEEH</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(46)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>PATTI</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(99)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>PD CHAURAHA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(53)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>PG BAZAR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(37)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>PTB CITY</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(55)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>PTB HO</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(74)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>RANIGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(18)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SAGRA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(114)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SAHEBGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(37)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SAIFABAD</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(34)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SANGIPUR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(109)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SANGRAMGARH</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(228)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SHITLAGANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(59)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SURANGPUR</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(55)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>SUWANSA</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(46)</span
+                ></button
+              ><button
+                class="px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+              >
+                <span>VN GANJ</span
+                ><span class="text-[10px] text-slate-400 font-semibold"
+                  >(33)</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Village Mode Container (Mode 2) -->
+        <div id="global-mode-container" class="hidden space-y-4">
+          <div>
+            <label
+              for="global-village-input"
+              class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5"
+            >
+              Search Village Across All 44 Main Areas
+            </label>
+            <div class="relative">
+              <input
+                type="text"
+                id="global-village-input"
+                placeholder="Enter any village name (e.g., DAULATPUR, SHIVPUR, RAMPUR, PURE LALA)..."
+                class="w-full pl-11 pr-10 py-3 text-base rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition placeholder:text-slate-400 font-medium"
+              />
+              <div
+                class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400"
+              >
+                <svg
+                  class="w-5 h-5 text-indigo-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <button
+                id="clear-global-btn"
+                class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Office Details & Controls Header Bar -->
+      <div
+        id="results-header-bar"
+        class="hidden flex flex-col md:flex-row md:items-center justify-between bg-white rounded-xl border border-slate-200/90 p-4 mb-4 gap-3 shadow-sm"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-lg border border-indigo-100"
+            id="office-avatar"
+          >
+            L
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2
+                class="text-lg font-bold text-slate-900"
+                id="current-office-name"
+              >
+                LALGANJ
+              </h2>
+              <span
+                id="village-count-badge"
+                class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+              >
+                190 villages
+              </span>
+            </div>
+            <p class="text-xs text-slate-500" id="current-office-subtext">
+              Showing all cataloged villages under this main area
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Buttons & View Toggles -->
+        <div class="flex items-center gap-2 self-end md:self-auto flex-wrap">
+          <!-- View Toggle (Grid / Table) -->
+          <div class="flex bg-slate-100 p-1 rounded-lg text-xs font-medium">
+            <button
+              id="view-grid-btn"
+              class="px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm flex items-center gap-1.5 font-semibold"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                ></path>
+              </svg>
+              Grid
+            </button>
+            <button
+              id="view-table-btn"
+              class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 flex items-center gap-1.5"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                ></path>
+              </svg>
+              Table
+            </button>
+          </div>
+
+          <!-- Copy Button -->
+          <button
+            id="copy-btn"
+            class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition"
+          >
+            <svg
+              class="w-3.5 h-3.5 text-slate-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+              ></path>
+            </svg>
+            <span id="copy-btn-text">Copy List</span>
+          </button>
+
+          <!-- Export CSV Button -->
+          <button
+            id="export-btn"
+            class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm transition"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              ></path>
+            </svg>
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Display Area: Villages Grid / Table / Empty States -->
+      <div id="results-container" class="space-y-4">
+        <!-- Initial Welcome State (No Office Selected) -->
+        <div
+          id="welcome-state"
+          class="bg-white rounded-2xl border border-dashed border-slate-300 p-10 text-center space-y-4"
+        >
+          <div
+            class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 mx-auto flex items-center justify-center"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+          </div>
+          <div class="max-w-md mx-auto">
+            <h3 class="text-lg font-bold text-slate-800">
+              Select or Type an Office Name
+            </h3>
+            <p class="text-sm text-slate-500 mt-1">
+              Choose an administrative area or post office from the field above
+              or click one of the quick tags to immediately view all mapped
+              villages.
+            </p>
+          </div>
+          <div class="flex justify-center flex-wrap gap-2 pt-2">
+            <button
+              onclick="selectOffice('LALGANJ')"
+              class="px-3.5 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-xs font-semibold rounded-lg text-slate-700 transition"
+            >
+              Try Lalganj (190)
+            </button>
+            <button
+              onclick="selectOffice('BIHAR')"
+              class="px-3.5 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-xs font-semibold rounded-lg text-slate-700 transition"
+            >
+              Try Bihar (245)
+            </button>
+            <button
+              onclick="selectOffice('KUNDA')"
+              class="px-3.5 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-xs font-semibold rounded-lg text-slate-700 transition"
+            >
+              Try Kunda (206)
+            </button>
+            <button
+              onclick="selectOffice('MAUAIMA')"
+              class="px-3.5 py-1.5 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 text-xs font-semibold rounded-lg text-slate-700 transition"
+            >
+              Try Mauaima (359)
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Display Mode -->
+        <div
+          id="village-grid"
+          class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+        >
+          <!-- Village cards rendered via JS -->
+        </div>
+
+        <!-- Table Display Mode -->
+        <div
+          id="village-table-wrapper"
+          class="hidden bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden"
+        >
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-200 text-sm">
+              <thead
+                class="bg-slate-50 text-slate-600 font-semibold text-xs uppercase tracking-wider"
+              >
+                <tr>
+                  <th scope="col" class="px-4 py-3 text-left w-16">#</th>
+                  <th scope="col" class="px-4 py-3 text-left">
+                    Village / Hamlet Name
+                  </th>
+                  <th scope="col" class="px-4 py-3 text-left">
+                    Main Area / Office
+                  </th>
+                  <th scope="col" class="px-4 py-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody
+                id="village-table-body"
+                class="divide-y divide-slate-100 bg-white"
+              >
+                <!-- Village rows rendered via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Global Village Results Container (When in Global search mode) -->
+        <div id="global-results-wrapper" class="hidden space-y-3">
+          <!-- Global results rendered via JS -->
+        </div>
+
+        <!-- Zero Results Message -->
+        <div
+          id="no-results"
+          class="hidden bg-white rounded-2xl border border-slate-200 p-12 text-center"
+        >
+          <svg
+            class="w-12 h-12 text-slate-400 mx-auto mb-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <h4 class="text-base font-bold text-slate-700">
+            No matching villages found
+          </h4>
+          <p class="text-sm text-slate-500 mt-1" id="no-results-hint">
+            Try adjusting your search terms or clearing the filter.
+          </p>
+        </div>
+      </div>
+
+      <!-- Toast Notification Box -->
+      <div
+        id="toast"
+        class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white text-sm font-medium px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2"
+      >
+        <svg
+          class="w-4 h-4 text-emerald-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          ></path>
+        </svg>
+        <span id="toast-message">Copied to clipboard</span>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2"
+      >
+        <p>
+          Official Village &amp; Geographic Classification Record • Pratapgarh
+          District &amp; Associated Divisions
+        </p>
+        <p>44 Administrative Main Areas Cataloged</p>
+      </div>
+    </footer>
+
+    <!-- Application Script -->
+    <script>
+      // Directory Database definition from official catalog
+      const DIRECTORY_DATA = {
+        ATHEHA: [
+          "DAULATPUR",
+          "AAHAR VIHAR",
+          "ADHAR KA POORVA",
+          "BARAH BEEGHA",
+          "BHARADPUR",
+          "BRAHMA KA PURWA",
+          "GANGA MISHR KA PURWA",
+          "BADI TIKURIYA",
+          "DALAPATTI",
+          "AJEETNAAGAR",
+          "BADA KHANEEPUR",
+          "CHHOTA KHANEEPUR",
+          "JAGANNATH KA PURWA",
+          "JAMALPUR",
+          "JODHEPUR",
+          "JOGAPUR",
+          "KALIKA PANDEY KA PURWA",
+          "KAM SINGHPUR",
+          "KAREEMPUR",
+          "KURMIYAN",
+          "LAHTHIYA",
+          "MADHAIYA",
+          "MAKHDOOMPUR",
+          "MALHIPUR",
+          "MANGAPUR KHAS",
+          "MASNI",
+          "NASEERPUR",
+          "NAWNAAR",
+          "PAAHI",
+          "PAHIYA",
+          "PANDE TARA",
+          "PANDRIYA",
+          "PARASPUR",
+          "PIPARI/PIPRI",
+          "PURE AHIRAN",
+          "PURE BADHAHI PATHAK",
+          "PURE BAISAN",
+          "PURE BHADAI",
+          "PURE BHALA",
+          "PURE CHANDAN",
+          "PURE CHAUHAN",
+          "PURE CHAURAHA",
+          "PURE CHINTA RAI",
+          "PURE DATT",
+          "PURE DUBEY",
+          "PURE FATEH",
+          "PURE ICHCHHA PANDEY",
+          "PURE ILAAHI",
+          "PURE ISHWARI",
+          "PURE JHALIHA",
+          "PURE JHAM",
+          "PURE JHURAHI",
+          "PURE JIAAN",
+          "PURE JIRJA",
+          "PURE JUTUKA",
+          "PURE KADAI",
+          "PURE KAITHAN",
+          "PURE KALEEN",
+          "PURE KALU",
+          "PURE KURMEEN",
+          "PURE LALA",
+          "PURE LOCHAN",
+          "PURE LOTHA",
+          "PURE MEDA",
+          "PURE MISHRAN",
+          "PURE NAGWAT",
+          "PURE NEER",
+          "PURE NOKHAI PANDEY",
+          "PURE OJHA",
+          "PURE PANDE KA PURWA",
+          "PURE RADHE",
+          "PURE RAM PRASAD",
+          "PURE RANJEET SINGH",
+          "PURE ROHTAK",
+          "PURE SABHA",
+          "PURE SAMBHAR SINGH",
+          "PURE SARDAR",
+          "PURE SHIVDIN",
+          "PURE SHRADDHA MISHR",
+          "PURE SIKANDAR",
+          "PURE SIROHRI",
+          "PURE THAKURDEEN",
+          "PURE TIWARI",
+          "PURE USRAHA",
+          "PURE VADAUVAB",
+          "PURE VENDUA",
+          "PURE VIJAYI",
+          "RADHANPUR",
+          "RAMBAGH",
+          "RANJEETPUR",
+          "RATIYAPUR",
+          "ROOPA KA PURWA",
+          "SHIVA KA PURWA",
+          "SHIVGARH",
+          "SOORAJPUR",
+          "UPADHYAYPUR",
+          "VAGEEYA",
+          "VEERGARH",
+          "AMAWAN",
+          "DEORI/DEWARI",
+          "JARIYARI",
+          "KUMBHIAIMA",
+          "MURAINI",
+          "NANAUTI",
+          "NEWARI",
+          "PURE BHAGWAT",
+          "RAJAPUR",
+          "UDAIPUR",
+          "UMRAR",
+        ],
+        BABUGANJ: [
+          "BAISALPUR",
+          "CHANDIPUR",
+          "KAJIPUR",
+          "KHEERI",
+          "KUNWAR KA PURWA",
+          "PADNAATH PUR",
+          "PURE BAKSH",
+          "PURE DHAMNI",
+          "PURE GANESH",
+          "PURE GULAB RAI",
+          "PURE NANDAN",
+          "PURE SHUKLAAN",
+          "RAMGARH KHAS",
+          "RAYPUR KHURD",
+          "SARAY MAKAI",
+          "SARAYRANI",
+          "SARDAR KA PURWA",
+          "VIJAYGANJ",
+          "PURE NOTI",
+          "DEEHMEDI",
+        ]
+      };
+
+      // State Variables
+      let currentMode = "office"; // 'office' or 'global'
+      let selectedOffice = null;
+      let currentView = "grid"; // 'grid' or 'table'
+      let officeFilterQuery = "";
+      let globalVillageQuery = "";
+      let filteredVillages = [];
+
+      // DOM Elements
+      const officeInput = document.getElementById("office-input");
+      const officeDropdown = document.getElementById("office-dropdown");
+      const clearOfficeBtn = document.getElementById("clear-office-btn");
+      const villageFilterInput = document.getElementById(
+        "village-filter-input"
+      );
+      const clearFilterBtn = document.getElementById("clear-filter-btn");
+      const quickPillsContainer = document.getElementById(
+        "quick-pills-container"
+      );
+
+      const modeOfficeBtn = document.getElementById("mode-office-btn");
+      const modeVillageBtn = document.getElementById("mode-village-btn");
+      const officeModeContainer = document.getElementById(
+        "office-mode-container"
+      );
+      const globalModeContainer = document.getElementById(
+        "global-mode-container"
+      );
+      const globalVillageInput = document.getElementById(
+        "global-village-input"
+      );
+      const clearGlobalBtn = document.getElementById("clear-global-btn");
+
+      const resultsHeaderBar = document.getElementById("results-header-bar");
+      const currentOfficeName = document.getElementById("current-office-name");
+      const currentOfficeSubtext = document.getElementById(
+        "current-office-subtext"
+      );
+      const officeAvatar = document.getElementById("office-avatar");
+      const villageCountBadge = document.getElementById("village-count-badge");
+
+      const viewGridBtn = document.getElementById("view-grid-btn");
+      const viewTableBtn = document.getElementById("view-table-btn");
+      const villageGrid = document.getElementById("village-grid");
+      const villageTableWrapper = document.getElementById(
+        "village-table-wrapper"
+      );
+      const villageTableBody = document.getElementById("village-table-body");
+      const globalResultsWrapper = document.getElementById(
+        "global-results-wrapper"
+      );
+      const welcomeState = document.getElementById("welcome-state");
+      const noResults = document.getElementById("no-results");
+      const noResultsHint = document.getElementById("no-results-hint");
+
+      const copyBtn = document.getElementById("copy-btn");
+      const copyBtnText = document.getElementById("copy-btn-text");
+      const exportBtn = document.getElementById("export-btn");
+      const toast = document.getElementById("toast");
+      const toastMessage = document.getElementById("toast-message");
+
+      // Initialize counts and UI
+      function init() {
+        // Sort offices alphabetically
+        const offices = Object.keys(DIRECTORY_DATA).sort();
+        let totalV = 0;
+        offices.forEach((o) => (totalV += DIRECTORY_DATA[o].length));
+        document.getElementById("stat-total-offices").textContent =
+          offices.length;
+        document.getElementById("stat-total-villages").textContent =
+          totalV.toLocaleString();
+
+        // Render Quick Pills
+        renderQuickPills(offices);
+
+        // Event Listeners for Office Input Autocomplete
+        officeInput.addEventListener("input", handleOfficeInput);
+        officeInput.addEventListener("focus", handleOfficeInput);
+        clearOfficeBtn.addEventListener("click", clearOffice);
+
+        // In-Office Village Filter
+        villageFilterInput.addEventListener("input", handleVillageFilterInput);
+        clearFilterBtn.addEventListener("click", clearVillageFilter);
+
+        // Global Village Input
+        globalVillageInput.addEventListener("input", handleGlobalVillageInput);
+        clearGlobalBtn.addEventListener("click", clearGlobalVillageInput);
+
+        // Mode switching
+        modeOfficeBtn.addEventListener("click", () => switchMode("office"));
+        modeVillageBtn.addEventListener("click", () => switchMode("global"));
+
+        // View switching
+        viewGridBtn.addEventListener("click", () => setView("grid"));
+        viewTableBtn.addEventListener("click", () => setView("table"));
+
+        // Actions
+        copyBtn.addEventListener("click", copyVillageList);
+        exportBtn.addEventListener("click", exportToCSV);
+
+        // Download entire self-contained app file
+        document
+          .getElementById("download-app-btn")
+          .addEventListener("click", downloadStandaloneApp);
+
+        // Click outside to close dropdown
+        document.addEventListener("click", (e) => {
+          if (
+            !officeInput.contains(e.target) &&
+            !officeDropdown.contains(e.target)
+          ) {
+            officeDropdown.classList.add("hidden");
+          }
+        });
+      }
+
+      // Render Quick Pill Badges
+      function renderQuickPills(offices) {
+        quickPillsContainer.innerHTML = "";
+        offices.forEach((office) => {
+          const count = DIRECTORY_DATA[office].length;
+          const btn = document.createElement("button");
+          btn.className = `px-2.5 py-1 text-xs rounded-lg border transition font-medium flex items-center gap-1.5 ${
+            selectedOffice === office
+              ? "bg-indigo-600 border-indigo-600 text-white shadow-sm"
+              : "bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/50"
+          }`;
+          btn.innerHTML = `<span>${office}</span><span class="text-[10px] ${
+            selectedOffice === office ? "text-indigo-200" : "text-slate-400"
+          } font-semibold">(${count})</span>`;
+          btn.onclick = () => selectOffice(office);
+          quickPillsContainer.appendChild(btn);
+        });
+      }
+
+      // Switch Search Mode
+      function switchMode(mode) {
+        currentMode = mode;
+        if (mode === "office") {
+          modeOfficeBtn.className =
+            "px-4 py-1.5 rounded-lg bg-white text-indigo-900 shadow-sm transition font-semibold flex items-center gap-2";
+          modeVillageBtn.className =
+            "px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-2";
+          officeModeContainer.classList.remove("hidden");
+          globalModeContainer.classList.add("hidden");
+          globalResultsWrapper.classList.add("hidden");
+          if (selectedOffice) {
+            resultsHeaderBar.classList.remove("hidden");
+            renderVillages();
+          } else {
+            welcomeState.classList.remove("hidden");
+            resultsHeaderBar.classList.add("hidden");
+          }
+        } else {
+          modeVillageBtn.className =
+            "px-4 py-1.5 rounded-lg bg-white text-indigo-900 shadow-sm transition font-semibold flex items-center gap-2";
+          modeOfficeBtn.className =
+            "px-4 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-2";
+          officeModeContainer.classList.add("hidden");
+          globalModeContainer.classList.remove("hidden");
+          villageGrid.classList.add("hidden");
+          villageTableWrapper.classList.add("hidden");
+          resultsHeaderBar.classList.add("hidden");
+          handleGlobalVillageInput();
+        }
+      }
+
+      // Set View: Grid or Table
+      function setView(view) {
+        currentView = view;
+        if (view === "grid") {
+          viewGridBtn.className =
+            "px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm flex items-center gap-1.5 font-semibold";
+          viewTableBtn.className =
+            "px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+        } else {
+          viewTableBtn.className =
+            "px-2.5 py-1 rounded-md bg-white text-slate-900 shadow-sm flex items-center gap-1.5 font-semibold";
+          viewGridBtn.className =
+            "px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+        }
+        if (currentMode === "office" && selectedOffice) {
+          renderVillages();
+        }
+      }
+
+      // Handle Office Autocomplete Typing
+      function handleOfficeInput() {
+        const query = officeInput.value.trim().toUpperCase();
+        clearOfficeBtn.classList.toggle("hidden", query.length === 0);
+
+        const offices = Object.keys(DIRECTORY_DATA).sort();
+        const matches = offices.filter((o) => o.toUpperCase().includes(query));
+
+        if (matches.length > 0) {
+          officeDropdown.innerHTML = "";
+          matches.forEach((office) => {
+            const count = DIRECTORY_DATA[office].length;
+            const item = document.createElement("div");
+            item.className =
+              "px-4 py-2.5 hover:bg-indigo-50 cursor-pointer flex items-center justify-between text-sm transition";
+
+            // Highlight match
+            let label = office;
+            if (query) {
+              const regex = new RegExp(`(${escapeRegex(query)})`, "gi");
+              label = office.replace(
+                regex,
+                '<span class="highlight">$1</span>'
+              );
+            }
+
+            item.innerHTML = `
+            <div class="flex items-center gap-2 font-medium text-slate-800">
+              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              <span>${label}</span>
+            </div>
+            <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2 py-0.5 rounded-full border border-slate-200">
+              ${count} villages
+            </span>
+          `;
+            item.onclick = () => {
+              selectOffice(office);
+              officeDropdown.classList.add("hidden");
+            };
+            officeDropdown.appendChild(item);
+          });
+          officeDropdown.classList.remove("hidden");
+        } else {
+          officeDropdown.innerHTML = `
+          <div class="px-4 py-3 text-xs text-slate-500 text-center">
+            No main area found matching "<strong>${escapeHtml(query)}</strong>"
+          </div>
+        `;
+          officeDropdown.classList.remove("hidden");
+        }
+      }
+
+      // Select an Office
+      function selectOffice(officeName) {
+        selectedOffice = officeName;
+        officeInput.value = officeName;
+        clearOfficeBtn.classList.remove("hidden");
+        officeDropdown.classList.add("hidden");
+        villageFilterInput.disabled = false;
+        villageFilterInput.value = "";
+        clearFilterBtn.classList.add("hidden");
+        officeFilterQuery = "";
+
+        // Update pills highlight
+        renderQuickPills(Object.keys(DIRECTORY_DATA).sort());
+
+        // Update Header
+        currentOfficeName.textContent = officeName;
+        officeAvatar.textContent = officeName.charAt(0);
+        const totalCount = DIRECTORY_DATA[officeName].length;
+        villageCountBadge.textContent = `${totalCount} cataloged villages`;
+        currentOfficeSubtext.textContent = `Showing villages officially mapped under ${officeName} area`;
+
+        resultsHeaderBar.classList.remove("hidden");
+        welcomeState.classList.add("hidden");
+
+        renderVillages();
+      }
+
+      // Clear Selected Office
+      function clearOffice() {
+        selectedOffice = null;
+        officeInput.value = "";
+        clearOfficeBtn.classList.add("hidden");
+        villageFilterInput.value = "";
+        villageFilterInput.disabled = true;
+        clearFilterBtn.classList.add("hidden");
+        officeFilterQuery = "";
+
+        resultsHeaderBar.classList.add("hidden");
+        villageGrid.classList.add("hidden");
+        villageTableWrapper.classList.add("hidden");
+        noResults.classList.add("hidden");
+        welcomeState.classList.remove("hidden");
+
+        renderQuickPills(Object.keys(DIRECTORY_DATA).sort());
+        officeInput.focus();
+      }
+
+      // Handle In-Office Village Filter
+      function handleVillageFilterInput() {
+        officeFilterQuery = villageFilterInput.value.trim().toUpperCase();
+        clearFilterBtn.classList.toggle(
+          "hidden",
+          officeFilterQuery.length === 0
+        );
+        renderVillages();
+      }
+
+      function clearVillageFilter() {
+        villageFilterInput.value = "";
+        officeFilterQuery = "";
+        clearFilterBtn.classList.add("hidden");
+        renderVillages();
+        villageFilterInput.focus();
+      }
+
+      // Render Villages (Grid or Table)
+      function renderVillages() {
+        if (!selectedOffice || !DIRECTORY_DATA[selectedOffice]) return;
+
+        const allVillages = DIRECTORY_DATA[selectedOffice];
+        if (officeFilterQuery) {
+          filteredVillages = allVillages.filter((v) =>
+            v.toUpperCase().includes(officeFilterQuery)
+          );
+        } else {
+          filteredVillages = [...allVillages];
+        }
+
+        const totalCount = allVillages.length;
+        if (officeFilterQuery) {
+          villageCountBadge.textContent = `Showing ${filteredVillages.length} of ${totalCount} villages`;
+        } else {
+          villageCountBadge.textContent = `${totalCount} cataloged villages`;
+        }
+
+        if (filteredVillages.length === 0) {
+          villageGrid.classList.add("hidden");
+          villageTableWrapper.classList.add("hidden");
+          noResults.classList.remove("hidden");
+          noResultsHint.textContent = `No villages in "${selectedOffice}" match "${officeFilterQuery}". Try a different keyword.`;
+          return;
+        }
+
+        noResults.classList.add("hidden");
+
+        if (currentView === "grid") {
+          villageTableWrapper.classList.add("hidden");
+          villageGrid.classList.remove("hidden");
+          renderGridView(filteredVillages, selectedOffice, officeFilterQuery);
+        } else {
+          villageGrid.classList.add("hidden");
+          villageTableWrapper.classList.remove("hidden");
+          renderTableView(filteredVillages, selectedOffice, officeFilterQuery);
+        }
+      }
+
+      // Render Grid Cards
+      function renderGridView(villages, office, query) {
+        villageGrid.innerHTML = "";
+        villages.forEach((village, idx) => {
+          const card = document.createElement("div");
+          card.className =
+            "group relative bg-white rounded-xl border border-slate-200/90 p-3.5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all flex flex-col justify-between";
+
+          let displayName = village;
+          if (query) {
+            const regex = new RegExp(`(${escapeRegex(query)})`, "gi");
+            displayName = village.replace(
+              regex,
+              '<span class="highlight">$1</span>'
+            );
+          }
+
+          card.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-start gap-2.5 min-w-0">
+              <span class="text-[10px] font-bold text-slate-400 bg-slate-100 rounded px-1.5 py-0.5 mt-0.5">
+                #${idx + 1}
+              </span>
+              <h3 class="text-sm font-semibold text-slate-800 break-words group-hover:text-indigo-600 transition">
+                ${displayName}
+              </h3>
+            </div>
+            <button 
+              onclick="copySingleVillage('${escapeSingleQuotes(village)}')" 
+              title="Copy village name" 
+              class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-indigo-600 p-1 rounded hover:bg-slate-50 transition"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            </button>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+            <span class="truncate">Office: <span class="font-medium text-slate-600">${office}</span></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          </div>
+        `;
+          villageGrid.appendChild(card);
+        });
+      }
+
+      // Render Table View
+      function renderTableView(villages, office, query) {
+        villageTableBody.innerHTML = "";
+        villages.forEach((village, idx) => {
+          const row = document.createElement("tr");
+          row.className = "hover:bg-indigo-50/40 transition group";
+
+          let displayName = village;
+          if (query) {
+            const regex = new RegExp(`(${escapeRegex(query)})`, "gi");
+            displayName = village.replace(
+              regex,
+              '<span class="highlight">$1</span>'
+            );
+          }
+
+          row.innerHTML = `
+          <td class="px-4 py-3 text-xs text-slate-400 font-mono">${idx + 1}</td>
+          <td class="px-4 py-3 font-semibold text-slate-800 text-sm group-hover:text-indigo-700">${displayName}</td>
+          <td class="px-4 py-3 text-xs text-slate-600 font-medium">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+              ${office}
+            </span>
+          </td>
+          <td class="px-4 py-3 text-right">
+            <button 
+              onclick="copySingleVillage('${escapeSingleQuotes(village)}')" 
+              class="text-xs text-slate-500 hover:text-indigo-600 font-medium px-2 py-1 rounded hover:bg-white border border-transparent hover:border-slate-200 transition"
+            >
+              Copy
+            </button>
+          </td>
+        `;
+          villageTableBody.appendChild(row);
+        });
+      }
+
+      // Global Village Reverse Search
+      function handleGlobalVillageInput() {
+        const query = globalVillageInput.value.trim().toUpperCase();
+        clearGlobalBtn.classList.toggle("hidden", query.length === 0);
+
+        welcomeState.classList.add("hidden");
+
+        if (!query) {
+          globalResultsWrapper.classList.add("hidden");
+          noResults.classList.remove("hidden");
+          noResultsHint.textContent =
+            "Type in any village or hamlet name to find which main administrative office it belongs to.";
+          return;
+        }
+
+        // Search across all offices
+        const matches = [];
+        for (const [office, villages] of Object.entries(DIRECTORY_DATA)) {
+          for (const village of villages) {
+            if (village.toUpperCase().includes(query)) {
+              matches.push({ office, village });
+            }
+          }
+        }
+
+        if (matches.length === 0) {
+          globalResultsWrapper.classList.add("hidden");
+          noResults.classList.remove("hidden");
+          noResultsHint.textContent = `No village records found matching "${query}" across all 44 main areas.`;
+          return;
+        }
+
+        noResults.classList.add("hidden");
+        globalResultsWrapper.classList.remove("hidden");
+
+        // Group matches by office for clean presentation
+        const grouped = {};
+        matches.forEach((m) => {
+          if (!grouped[m.office]) grouped[m.office] = [];
+          grouped[m.office].push(m.village);
+        });
+
+        globalResultsWrapper.innerHTML = `
+        <div class="bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-xl p-4 mb-4 flex items-center justify-between text-sm">
+          <span>Found <strong>${
+            matches.length
+          }</strong> matching village instance(s) across <strong>${
+          Object.keys(grouped).length
+        }</strong> office area(s):</span>
+          <button onclick="copyGlobalMatches()" class="text-xs bg-white text-indigo-700 px-3 py-1 rounded-lg font-semibold border border-indigo-200 hover:bg-indigo-100 transition shadow-sm">
+            Copy All Matches
+          </button>
+        </div>
+      `;
+
+        for (const [office, vList] of Object.entries(grouped)) {
+          const groupCard = document.createElement("div");
+          groupCard.className =
+            "bg-white rounded-xl border border-slate-200 shadow-sm p-4 space-y-3";
+
+          const tags = vList
+            .map((v) => {
+              const regex = new RegExp(`(${escapeRegex(query)})`, "gi");
+              const highlighted = v.replace(
+                regex,
+                '<span class="highlight">$1</span>'
+              );
+              return `
+            <span class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 text-slate-800 text-xs px-2.5 py-1.5 rounded-lg transition font-medium">
+              ${highlighted}
+            </span>
+          `;
+            })
+            .join("");
+
+          groupCard.innerHTML = `
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <h3 class="text-sm font-bold text-slate-800">${office}</h3>
+              <span class="text-xs text-slate-500">(${vList.length} matching in this office)</span>
+            </div>
+            <button onclick="switchToOfficeFromGlobal('${office}')" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 hover:underline">
+              View All ${DIRECTORY_DATA[office].length} Villages in ${office} &rarr;
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            ${tags}
+          </div>
+        `;
+          globalResultsWrapper.appendChild(groupCard);
+        }
+      }
+
+      function clearGlobalVillageInput() {
+        globalVillageInput.value = "";
+        clearGlobalBtn.classList.add("hidden");
+        handleGlobalVillageInput();
+        globalVillageInput.focus();
+      }
+
+      // Switch to office view directly from a global search item
+      function switchToOfficeFromGlobal(office) {
+        switchMode("office");
+        selectOffice(office);
+      }
+
+      // Copy single village
+      function copySingleVillage(villageName) {
+        copyTextToClipboard(villageName);
+        showToast(`Copied "${villageName}" to clipboard`);
+      }
+
+      // Copy entire filtered village list
+      function copyVillageList() {
+        if (!filteredVillages || filteredVillages.length === 0) return;
+        const text = filteredVillages.join("\n");
+        copyTextToClipboard(text);
+        showToast(`Copied ${filteredVillages.length} villages to clipboard`);
+      }
+
+      // Copy global matches
+      function copyGlobalMatches() {
+        const query = globalVillageInput.value.trim().toUpperCase();
+        const matches = [];
+        for (const [office, villages] of Object.entries(DIRECTORY_DATA)) {
+          for (const village of villages) {
+            if (village.toUpperCase().includes(query)) {
+              matches.push(`${village} (${office})`);
+            }
+          }
+        }
+        copyTextToClipboard(matches.join("\n"));
+        showToast(`Copied ${matches.length} matching villages`);
+      }
+
+      // Clipboard Helper (Using document.execCommand to satisfy iframe requirements)
+      function copyTextToClipboard(text) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        textarea.style.top = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+          document.execCommand("copy");
+        } catch (err) {
+          console.error("Fallback clipboard copy failed:", err);
+        }
+        document.body.removeChild(textarea);
+      }
+
+      // Export to CSV
+      function exportToCSV() {
+        if (!selectedOffice || filteredVillages.length === 0) return;
+
+        let csvContent = "data:text/csv;charset=utf-8,";
+        csvContent += "S.No.,Main Area,Village Name\r\n";
+
+        filteredVillages.forEach((village, idx) => {
+          csvContent += `${idx + 1},"${selectedOffice}","${village.replace(
+            /"/g,
+            '""'
+          )}"\r\n`;
+        });
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute(
+          "download",
+          `${selectedOffice}_Villages_${new Date()
+            .toISOString()
+            .slice(0, 10)}.csv`
+        );
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        showToast(`Exported CSV for ${selectedOffice}`);
+      }
+
+      // Download standalone application HTML file for offline sharing
+      function downloadStandaloneApp() {
+        const fullHtml =
+          "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const blob = new Blob([fullHtml], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Village_Directory_App.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("App downloaded! You can share and open it anywhere.");
+      }
+
+      // Toast notification display
+      let toastTimeout;
+      function showToast(msg) {
+        toastMessage.textContent = msg;
+        toast.classList.remove(
+          "opacity-0",
+          "translate-y-20",
+          "pointer-events-none"
+        );
+        toast.classList.add("opacity-100", "translate-y-0");
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.add(
+            "opacity-0",
+            "translate-y-20",
+            "pointer-events-none"
+          );
+          toast.classList.remove("opacity-100", "translate-y-0");
+        }, 2500);
+      }
+
+      // String Escaping Utilities
+      function escapeHtml(string) {
+        return String(string)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function escapeRegex(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function escapeSingleQuotes(string) {
+        return string.replace(/'/g, "\\'");
+      }
+
+      // Initialize application when DOM is ready
+      window.addEventListener("DOMContentLoaded", init);
+    </script>
+  </body>
+</html>
