@@ -3333,14 +3333,7 @@
       }
     </style>
   </head>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .catch((err) => console.error('PWA registration failed:', err));
-      });
-    }
-  </script>
+  
   <body
     class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased"
   >
@@ -5099,6 +5092,14 @@
 
       // Initialize application when DOM is ready
       window.addEventListener("DOMContentLoaded", init);
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .catch((err) => console.error('PWA registration failed:', err));
+        });
+      }
     </script>
   </body>
 </html>
