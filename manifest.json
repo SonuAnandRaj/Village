@@ -2,7 +2,7 @@
   "name": "Village & Area Directory",
   "short_name": "VillageDir",
   "description": "Pratapgarh District Village & Administrative Area Directory Finder",
-  "start_url": "https://sonuanandraj.github.io/Village/",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
